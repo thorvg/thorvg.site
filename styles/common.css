@@ -1,0 +1,128 @@
+:root {
+  --font-headline: Poppins, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: -apple-system, "Open Sans", BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", Roboto Mono, monospace;
+
+  --background-color: white;
+  --foreground-color: rgb(14,14,14);
+  --hover-color: rgba(0,0,0,0.06);
+  --color-text-brand: #007be5;
+  --scrollbar-color: color-mix(in oklab, #0d0d0d 30%, transparent);
+
+  --primary-color: #212121;
+  --secondary-color: rgb(69 65 62);
+  --background-color: #fff;
+  --content-background-color: #fff;
+  --accent-color: #AFF4FF; /* AFF4FF */
+
+  --code-border-radius: 6px;
+  --code-border-color: rgba(0,0,0,0.12);
+
+  --code-color-keyword: #e20e2c;
+  --code-color-classname: #f75c5c;
+  --code-color-function: oklch(47.18% 0.2579 304);
+  --code-color-comment: #757E87;
+  --code-color-string: #22863a;
+  --code-color-number: #d20fa8;
+  --code-color-operator: #0d6bde;
+  --code-color-punctuation: var(--foreground-color);
+
+  --header-height: 60px;
+  --nav-color: black;
+  --nav-background-color: white;
+  --shadow-default: -2px;
+  --shadow-color: -5px;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth; /* 인덱스 이동 시 스크롤 되며 이동 */
+  overflow-x: hidden;
+  height: 100%;
+}
+
+* {
+  scrollbar-color: var(--scrollbar-color) transparent;
+  scrollbar-width: thin;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-headline);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+main, section, div {
+  display: block;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+img {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
+.w-4 {
+    width: calc(var(--spacing) * 4);
+}
+
+.py-6 {
+  padding-bottom: 3rem !important;
+  padding-top: 3rem !important;
+}
+
+.py-5 {
+  padding-bottom: 1.5rem !important;
+  padding-top: 1.5rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1rem !important;
+}
+
+.margin-top {
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.margin-bottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.margin-small {
+  margin: 1rem
+}
+
+.margin-small-medium {
+  margin: 1.5rem;
+}
+
+.margin-medium {
+  margin: 2rem
+}
+
+.margin-large {
+  margin: 3rem
+}
+
+.max-width-med-large {
+  width: 100%;
+}

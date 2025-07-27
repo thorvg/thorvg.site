@@ -1,0 +1,145 @@
+code,
+.code-block pre,
+.code-block pre::before /* $ */,
+code[class*=language-], pre[class*=language-],
+.line-numbers .line-numbers-rows {
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* [ 단일 코드 */
+.prose code {
+    word-wrap: break-word;
+}
+
+.prose :where(code):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    font-weight: inherit;
+    background-color: rgba(0,0,0,0.07);
+    border-radius: .375rem;
+    border-width: 1px;
+    border-color: #f0f0f0;
+    padding: .125rem .25rem;
+}
+
+/* ] 단일 코드 */
+
+/* 한 줄짜리 코드 */
+.code-block {
+  position: relative;
+  width: 100%;
+  background-color: var(--content-background-color);
+  border-radius: var(--code-border-radius);
+  border: 1px solid var(--code-border-color);
+  padding: 10px 48px 10px 12px;
+}
+
+.code-block pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  position: relative;
+}
+
+.code-block pre::before {
+  content: "$ ";
+  user-select: none;
+  color: var(--secondary-color);
+}
+
+.copy-button {
+    position: absolute;
+    top: 50%;
+    right: 12px; /* 48px padding 영역 위 */
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-icon-wrapper {
+    display: flex;
+    width: 16px;
+    height: 16px;
+}
+
+.copy-icon, .done-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* [ animation */
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  /* ] animation */
+}
+
+/* [ animation */
+.copy-icon.active, .done-icon.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* ] animation */
+
+/* Prims */
+
+pre[class*=language-] {
+    background: transparent;
+}
+
+.code-snippet {
+  position: relative;
+  border-radius: var(--code-border-radius);
+  border: 1px solid var(--code-border-color);
+  overflow: hidden;
+  margin: 16px 0;
+  background-color: var(--content-background-color);
+}
+
+.line-numbers .line-numbers-rows {
+  margin-top: -0.2rem;
+  border-right: none;
+}
+
+.prism-code .token.operator {
+  color: var(--code-color-operator);
+}
+
+.prism-code .token.class-name {
+  color: var(--code-color-classname);
+}
+
+.prism-code .token.function {
+    color: var(--code-color-function);
+}
+
+.prism-code .token.comment {
+  color: var(--code-color-comment);
+}
+
+.prism-code .token.string {
+  color: var(--code-color-string);
+}
+
+.prism-code .token.number {
+  color: var(--code-color-number);
+}
+
+.prism-code .token.keyword {
+  color: var(--code-color-keyword);
+}
+
+.prism-code .token.punctuation {
+  color: var(--code-color-punctuation);
+}

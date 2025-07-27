@@ -1,0 +1,179 @@
+
+.example-image-wrapper {
+  width: 100%
+}
+
+.example-image-wrapper {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.example-image-wrapper img {
+  display: inline-block;
+}
+
+.logo-lottie-files {
+  width: 20rem;
+  object-fit: contain;
+}
+
+/* 영상 중앙 */
+
+.example-container {
+  width: 100%;
+  margin: 1.5rem 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.example-container.limit-width {
+  max-width: 600px;
+}
+
+.example-container.px-5 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.example-container.px-10 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+@media (max-width: 1215px) {
+  .example-container.limit-width {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .example-container.px-5 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .example-container.px-10 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (max-width: 841px) {
+  .example-container.limit-width {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .example-container.px-10 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .logo-lottie-files {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .example-container.px-10 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.sample {
+  width: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--code-border-color);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+
+.sample video, .example-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+/* In practice layout */
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.row {
+  display: flex;
+  flex-direction: column; /* 기본 세로 배치 */
+  flex-wrap: wrap; /* 공간이 부족할 때 요소가 줄어들거나 오버플로우 */
+  width: 100%;
+  margin: 0.5em 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.col-lg-3 {
+  align-self: stretch;
+}
+
+.col-lg-3 h3 {
+  padding-top: 0.6rem;
+  margin-top: 0.8em;
+  margin-bottom: .2rem;
+  font-size: 1.35em;
+}
+
+@media (min-width: 992px) {
+  .row {
+    flex-direction: row; /* 가로 배치 */
+  }
+
+  .col-lg-3 {
+    width: 30%;
+    max-width: 200px;
+    padding-right: 0.75em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 상단 정렬 */
+  }
+
+  .col-lg-3 h3 {
+    padding-top: 0;
+  }
+
+  .col-lg-7 {
+    width: 70%;
+  }
+
+
+
+  .example-container.px-5 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.order-2 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.img-fluid {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
