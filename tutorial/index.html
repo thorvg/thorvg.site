@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <base href="/thorvg.homepage/" />
+        <link rel="icon" sizes="192x192" href="https://raw.githubusercontent.com/ol-of/thorvg.homepage/main/icon/site_icon.png" type="image/png">
+        <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ol-of/thorvg.homepage/main/icon/site_icon.png" type="image/png">
+
+        <title>Tutorial | ThorVG</title>
+        <meta name="description" content="This tutorial provides a step-by-step guide to programming with ThorVG.">
+        <link rel="canonical" href="https://www.thorvg.org/tutorial">
+        <meta property="og:title" content="Tutorial | ThorVG">
+        <meta property="og:description" content="This tutorial provides a step-by-step guide to programming with ThorVG.">
+        <meta property="og:image" content="https://raw.githubusercontent.com/ol-of/thorvg.homepage/main/image/homepage_preview.png">
+        <meta property="og:image:width" content="844">
+        <meta property="og:image:height" content="513">
+        <meta property="og:url" content="https://www.thorvg.org/tutorial">
+        <meta property="og:site_name" content="ThorVG">
+        <meta property="og:type" content="website">
+        <script type="application/ld+json">{"@context":"https://schema.org/","@type":"WebSite","name":"ThorVG","url":"https://www.thorvg.org"}</script>
+        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"ThorVG","alternateName":["Thor Vector Graphics","토르 벡터 그래픽스","토르VG"],"url":"https://www.thorvg.org/","sameAs":["https://www.linkedin.com/company/thorvg/"],"description":"Thor Vector Graphics is a lightweight portable library used for drawing vector-based scenes and animations including SVG and Lottie. It can be freely utilized across various software platforms and applications to visualize graphical contents.","applicationCategory":"GraphicsApplication","operatingSystem":"Linux, Windows, macOS, iOS, Android, WebAssembly, RTOS, Embedded","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"910"},"potentialAction":{"@type":"SearchAction","target":"https://www.thorvg.org/?s={search_term_string}","query-input":"required name=search_term_string"},"inLanguage":"en","publisher":{"@type":"Organization","name":"ThorVG Project","alternateName":"토르 벡터 그래픽스","url":"https://www.thorvg.org/","sameAs":["https://www.linkedin.com/company/thorvg/","https://github.com/thorvg/"],"founder":{"@id":"#hermet"}},"creator":{"@id":"#hermet"}},{"@type":"SoftwareSourceCode","name":"ThorVG","codeRepository":"https://github.com/thorvg/thorvg","programmingLanguage":"C++","license":"https://opensource.org/licenses/MIT"},{"@type":"Person","@id":"#hermet","name":"Hermet Park","alternateName":["박춘언","hermetpark","hermet"],"sameAs":["https://github.com/hermet","https://www.linkedin.com/in/hermetpark/","https://ko.wikipedia.org/wiki/%EB%B0%95%EC%B6%98%EC%96%B8","https://x.com/hermetpark","https://www.facebook.com/hermetpark/"]},{"@type":"CreativeWork","name":"UI 시스템 블랙북","author":{"@id":"#hermet"},"url":"https://ebook.insightbook.co.kr/book/159","inLanguage":"ko","description":"UI와 그래픽스 시스템 개발 분야에 처음 발을 딛는 분들을 위한 가이드로, 시스템 구조, 상호작용, OS, 윈도우 시스템, 그래픽스 프레임워크, 위젯 시스템 등 중요한 개념을 소개"}]}</script>
+        <meta name="google-site-verification" content="FrbPZFsiXPYTcN9PHwAaU_2jkQYf65He8meFdDsFHwc">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Tutorial | ThorVG">
+        <meta name="twitter:description" content="This tutorial provides a step-by-step guide to programming with ThorVG.">
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/ol-of/thorvg.homepage/main/image/homepage_preview.png">
+        <meta name="format-detection" content="telephone=no">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-c.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+        <link rel="stylesheet" href="styles/common.css">
+        <link rel="stylesheet" href="styles/nav.css">
+        <link rel="stylesheet" href="styles/layout.css">
+        <link rel="stylesheet" href="styles/code.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <link rel="stylesheet" href="styles/tutorial.css">
+
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header class="nav">
+            <a href="./" class="logo"><img src="logo/ThorVG-simple.svg" alt="Home" /></a>
+
+            <button class="menu-toggle" aria-label="Open menu"><img class="menu-icon" src="icon/menu.svg" alt="Menu" /></button>
+
+            <nav class="menu fade-in-on-load">
+                <a href="about/" class="menu-item"><span class="menu-bg">About</span></a>
+                <a href="tutorial/" class="menu-item is-selected"><span class="menu-bg">Tutorial</span></a>
+                <a href="reference/" class="menu-item"><span class="menu-bg">Reference</span></a>
+                <a href="https://deepwiki.com/thorvg/thorvg" target="_blank" rel="noopener noreferrer" class="menu-item">
+                    <span class="menu-bg">Docs<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="25" viewBox="0 0 24 25" stroke="currentColor" role="presentation"><path d="M7 17.0293L17 7.0293"></path><path d="M7 7.0293H17V17.0293"></path></svg></span>
+                </a>
+                <a href="https://github.com/thorvg/thorvg/releases" target="_blank" rel="noopener noreferrer" class="menu-item">
+                    <span class="menu-bg">Releases<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="25" viewBox="0 0 24 25" stroke="currentColor" role="presentation"><path d="M7 17.0293L17 7.0293"></path><path d="M7 7.0293H17V17.0293"></path></svg></span>
+                </a>
+                <a href="viewer/" class="menu-item"><span class="menu-bg">Viewer</span></a>
+            </nav>
+        </header>
+
+        <nav class="menu-drawer">
+            <a href="./">Home</a>
+            <a href="about/">About</a>
+            <a href="tutorial/" class="is-selected">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" style="margin-right: 20px; transform: rotate(180deg);">
+                    <rect width="256" height="256" fill="none"></rect><line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line><polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
+                </svg>
+                Tutorial
+            </a>
+            <a href="reference/">Reference</a>
+            <a href="https://deepwiki.com/thorvg/thorvg" target="_blank" rel="noopener noreferrer">
+                Docs<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="25" viewBox="0 0 24 25" stroke="currentColor" role="presentation"><path d="M7 17.0293L17 7.0293"></path><path d="M7 7.0293H17V17.0293"></path></svg>
+            </a>
+            <a href="https://github.com/thorvg/thorvg/releases" target="_blank" rel="noopener noreferrer">
+                Releases<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="25" viewBox="0 0 24 25" stroke="currentColor" role="presentation"><path d="M7 17.0293L17 7.0293"></path><path d="M7 7.0293H17V17.0293"></path></svg>
+            </a>
+            <a href="viewer/">Viewer</a>
+        </nav>
+
+        <main class="main">
+            <div class="container fade-in-and-move-up-on-load">
+                <div class="columns py-6">
+                    <div class="column is-9">
+                        <article class="prose prose-vercel">
+                            <section id="tutorial">
+                                <h1>Tutorial</h1>
+                                <p>It explains how to set up the environment for building ThorVG and how to draw various graphic elements through ThorVG with simple examples.</p>
+                            </section>
+                            <section id="build-and-install">
+                                <h2>Build and install</h2>
+                                <p>You can download the ThorVG tarball via the <a href="https://github.com/thorvg/thorvg/tags" target="_blank" rel="noopener noreferrer">releases</a> link.  The latest version is recommended. ThorVG supports <a href="https://mesonbuild.com/" target="_blank" rel="noopener noreferrer">meson</a> build system. Install the meson and <a href="https://ninja-build.org/" target="_blank" rel="noopener noreferrer">ninja</a> if you don't have them already.</p>
+                                <p>Run meson to configure ThorVG in the thorvg root folder.</p>
+                                <div class="code-block">
+                                    <pre class="code-content">meson setup builddir</pre>
+                                    <button class="copy-button" type="button" aria-label="Copy to clipboard">
+                                        <span class="copy-icon-wrapper">
+                                            <div>
+                                                <div class="copy-icon active">
+                                                    <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="done-icon">
+                                                    <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5607 3.99999L15.0303 4.53032L6.23744 13.3232C5.55403 14.0066 4.44599 14.0066 3.76257 13.3232L4.2929 12.7929L3.76257 13.3232L0.969676 10.5303L0.439346 9.99999L1.50001 8.93933L2.03034 9.46966L4.82323 12.2626C4.92086 12.3602 5.07915 12.3602 5.17678 12.2626L13.9697 3.46966L14.5 2.93933L15.5607 3.99999Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </button>
+                                </div>
+                                <p>Run ninja to build and install ThorVG.</p>
+                                <div class="code-block">
+                                    <pre class="code-content">ninja -C builddir install</pre>
+                                    <button class="copy-button" type="button" aria-label="Copy to clipboard">
+                                        <span class="copy-icon-wrapper">
+                                            <div>
+                                                <div class="copy-icon active">
+                                                    <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="done-icon">
+                                                    <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5607 3.99999L15.0303 4.53032L6.23744 13.3232C5.55403 14.0066 4.44599 14.0066 3.76257 13.3232L4.2929 12.7929L3.76257 13.3232L0.969676 10.5303L0.439346 9.99999L1.50001 8.93933L2.03034 9.46966L4.82323 12.2626C4.92086 12.3602 5.07915 12.3602 5.17678 12.2626L13.9697 3.46966L14.5 2.93933L15.5607 3.99999Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </button>
+                                </div>
+                                <p>Regardless of the installation, all build results (symbols, executable) are generated in the builddir folder in thorvg. Some results such as examples won't be installed, you can check <a href="tutorial/#more-examples">More examples</a> section to see how to change it.</p>
+                                <p>Note that some systems might include ThorVG package as a default component. In that case, you can skip this manual installation.</p>
+                                <section id="build-with-visual-studio">
+                                    <h3>Build with Visual Studio</h3>
+                                    <p>If you want to create Visual Studio project files, use the command <code>--backend=vs</code>. The resulting solution file (thorvg.sln) will be located in the build folder.</p>
+                                    <div class="code-block">
+                                        <pre class="code-content">meson setup builddir --backend=vs</pre>
+                                        <button class="copy-button" type="button" aria-label="Copy to clipboard">
+                                            <span class="copy-icon-wrapper">
+                                                <div>
+                                                    <div class="copy-icon active">
+                                                        <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="done-icon">
+                                                        <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5607 3.99999L15.0303 4.53032L6.23744 13.3232C5.55403 14.0066 4.44599 14.0066 3.76257 13.3232L4.2929 12.7929L3.76257 13.3232L0.969676 10.5303L0.439346 9.99999L1.50001 8.93933L2.03034 9.46966L4.82323 12.2626C4.92086 12.3602 5.07915 12.3602 5.17678 12.2626L13.9697 3.46966L14.5 2.93933L15.5607 3.99999Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </section>
+                                <section id="install-with-vcpkg">
+                                    <h3>Install with vcpkg</h3>
+                                    <p>You can easily download and install the pre-packaged ThorVG using the <a href="https://vcpkg.io/en/index.html">vcpkg</a> package manager. First, ensure you are in the desired directory where you want to install the tool. Then, clone the vcpkg repository with the following command.</p>
+                                    <div class="code-block">
+                                        <pre class="code-content">git clone https://github.com/Microsoft/vcpkg.git</pre>
+                                        <button class="copy-button" type="button" aria-label="Copy to clipboard">
+                                            <span class="copy-icon-wrapper">
+                                                <div>
+                                                    <div class="copy-icon active">
+                                                        <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="done-icon">
+                                                        <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5607 3.99999L15.0303 4.53032L6.23744 13.3232C5.55403 14.0066 4.44599 14.0066 3.76257 13.3232L4.2929 12.7929L3.76257 13.3232L0.969676 10.5303L0.439346 9.99999L1.50001 8.93933L2.03034 9.46966L4.82323 12.2626C4.92086 12.3602 5.07915 12.3602 5.17678 12.2626L13.9697 3.46966L14.5 2.93933L15.5607 3.99999Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <p>Run ninja to build and install ThorVG.</p>
+                                    <div class="code-block">
+                                        <pre class="code-content">./bootstrap-vcpkg.sh</pre>
+                                        <button class="copy-button" type="button" aria-label="Copy to clipboard">
+                                            <span class="copy-icon-wrapper">
+                                                <div>
+                                                    <div class="copy-icon active">
+                                                        <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="done-icon">
+                                                        <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5607 3.99999L15.0303 4.53032L6.23744 13.3232C5.55403 14.0066 4.44599 14.0066 3.76257 13.3232L4.2929 12.7929L3.76257 13.3232L0.969676 10.5303L0.439346 9.99999L1.50001 8.93933L2.03034 9.46966L4.82323 12.2626C4.92086 12.3602 5.07915 12.3602 5.17678 12.2626L13.9697 3.46966L14.5 2.93933L15.5607 3.99999Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <p>Install the ThorVG package.</p>
+                                    <div class="code-block">
+                                        <pre class="code-content">./vcpkg install thorvg</pre>
+                                        <button class="copy-button" type="button" aria-label="Copy to clipboard">
+                                            <span class="copy-icon-wrapper">
+                                                <div>
+                                                    <div class="copy-icon active">
+                                                        <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="done-icon">
+                                                        <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5607 3.99999L15.0303 4.53032L6.23744 13.3232C5.55403 14.0066 4.44599 14.0066 3.76257 13.3232L4.2929 12.7929L3.76257 13.3232L0.969676 10.5303L0.439346 9.99999L1.50001 8.93933L2.03034 9.46966L4.82323 12.2626C4.92086 12.3602 5.07915 12.3602 5.17678 12.2626L13.9697 3.46966L14.5 2.93933L15.5607 3.99999Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </section>
+                                <section id="install-with-conan">
+                                    <h3>Install with Conan</h3>
+                                    <p>You can download and install the pre-packaged ThorVG using the <a href="https://conan.io/" target="_blank" rel="noopener noreferrer">Conan</a> package manager. Start by following the instructions on <a href="https://conan.io/downloads" target="_blank" rel="noopener noreferrer">this page</a> to set up Conan on your system. Once Conan is configured, proceed to install the ThorVG package by executing the appropriate command in your command line interface.</p>
+                                    <div class="code-block">
+                                        <pre class="code-content">conan install --requires="thorvg/[*]" --build=missing</pre>
+                                        <button class="copy-button" type="button" aria-label="Copy to clipboard">
+                                            <span class="copy-icon-wrapper">
+                                                <div>
+                                                    <div class="copy-icon active">
+                                                        <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="done-icon">
+                                                        <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5607 3.99999L15.0303 4.53032L6.23744 13.3232C5.55403 14.0066 4.44599 14.0066 3.76257 13.3232L4.2929 12.7929L3.76257 13.3232L0.969676 10.5303L0.439346 9.99999L1.50001 8.93933L2.03034 9.46966L4.82323 12.2626C4.92086 12.3602 5.07915 12.3602 5.17678 12.2626L13.9697 3.46966L14.5 2.93933L15.5607 3.99999Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </section>
+                                <section id="install-with-msys2">
+                                    <h3>Install with MSYS2</h3>
+                                    <p>To install ThorVG using the <a href="https://www.msys2.org/" target="_blank" rel="noopener noreferrer">MSYS2</a> package manager, begin by downloading and running the MSYS2 installer from their official website. Follow the on-screen instructions to complete the installation. Once installed, open one of the provided terminals from the Start Menu, selecting the appropriate one based on your system's architecture (either 32-bit or 64-bit) and the desired compiler library (MSVCRT or UCRT). After setting up the terminal, you can install the ThorVG package by executing the following command in the terminal.</p>
+                                    <div class="code-block">
+                                        <pre class="code-content">pacman -S thorvg</pre>
+                                        <button class="copy-button" type="button" aria-label="Copy to clipboard">
+                                            <span class="copy-icon-wrapper">
+                                                <div>
+                                                    <div class="copy-icon active">
+                                                        <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="done-icon">
+                                                        <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5607 3.99999L15.0303 4.53032L6.23744 13.3232C5.55403 14.0066 4.44599 14.0066 3.76257 13.3232L4.2929 12.7929L3.76257 13.3232L0.969676 10.5303L0.439346 9.99999L1.50001 8.93933L2.03034 9.46966L4.82323 12.2626C4.92086 12.3602 5.07915 12.3602 5.17678 12.2626L13.9697 3.46966L14.5 2.93933L15.5607 3.99999Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </section>
+                            </section>
+                            <section id="basic-programming">
+                                <h2>Basic Programming</h2>
+                                <p>ThorVG supports C++ Programming Interfaces. The following is a quick-start to show you how to use the essential APIs. As the prerequisite, include the ThorVG header file in your source code.</p>
+                                <div class="code-block">
+                                    <pre class="code-content">#include &lt;thorvg.h&gt;</pre>
+                                    <button class="copy-button" type="button" aria-label="Copy to clipboard">
+                                        <span class="copy-icon-wrapper">
+                                            <div>
+                                                <div class="copy-icon active">
+                                                    <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="done-icon">
+                                                    <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5607 3.99999L15.0303 4.53032L6.23744 13.3232C5.55403 14.0066 4.44599 14.0066 3.76257 13.3232L4.2929 12.7929L3.76257 13.3232L0.969676 10.5303L0.439346 9.99999L1.50001 8.93933L2.03034 9.46966L4.82323 12.2626C4.92086 12.3602 5.07915 12.3602 5.17678 12.2626L13.9697 3.46966L14.5 2.93933L15.5607 3.99999Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </button>
+                                </div>
+                                <section id="initialization">
+                                    <h3>Initialization</h3>
+                                    <p>In the first step, initialize the ThorVG engine. This prepares and runs the engine internal steps.</p>
+                                    <div aria-label="code snippet" class="code-snippet not-prose">
+                                        <pre class="prism-code line-numbers"><code class="language-c">// Initialize the ThorVG engine
+tvg::Initializer::init(0);</code></pre>
+                                    </div>
+                                    <p>The second parameter of the <code><a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Initializer.html" target="_blank" rel="noopener noreferrer">Initializer</a>::<a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Initializer.html#aecd30dc028635b645b0dac5b6facea73" target="_blank" rel="noopener noreferrer">init</a>()</code> requires the ThorVG designated threads number. To use full capacity of the system, you can pass the number of threads to run ThorVG tasks. It will spawn the threads and run Task-Scheduler to progress multiple jobs asynchronously. If you don't know the exact number, you can use <code>std::thread::hardware_concurrency()</code> instead.</p>
+                                    <p>ThorVG renders vector scenes to the given canvas buffer. The following shows you an example how to prepare an empty canvas for drawing.</p>
+                                    <div aria-label="code snippet" class="code-snippet not-prose">
+                                        <pre class="prism-code line-numbers"><code class="language-c">// A canvas target buffer
+static uint32_t buffer[WIDTH * HEIGHT];
+// Generate a canvas
+auto canvas = tvg::SwCanvas::gen();
+// Setup the canvas target
+canvas->target(buffer, WIDTH, WIDTH, HEIGHT, tvg::ColorSpace::ARGB8888);</code></pre>
+                                    </div>
+                                    <p>If you have your own canvas buffer memory, you can pass its pointer to the canvas. <code><a href="https://thorvg.github.io/thorvg/html/classtvg_1_1SwCanvas.html" target="_blank" rel="noopener noreferrer">SwCanvas</a>::<a href="https://thorvg.github.io/thorvg/html/classtvg_1_1SwCanvas.html#a2d4c80a0ba45465b073ee0c279e8c8dc" target="_blank" rel="noopener noreferrer">target</a>()</code> requires five parameters: buffer memory, buffer stride size, canvas width, height and Colorspace. The last parameter determines the format of the pixel color channels used during drawing scene on the canvas buffer.</p>
+                                </section>
+                                <section id="shape">
+                                    <h3>Shape</h3>
+                                    <p>Once a canvas is ready, you can create shapes by pushing them to the canvas.</p>
+                                    <div aria-label="code snippet" class="code-snippet not-prose">
+                                        <pre class="prism-code line-numbers"><code class="language-c">// Generate a shape
+auto rect = tvg::Shape::gen();
+// Append a rounded rectangle to the shape (x, y, w, h, rx, ry)
+rect->appendRect(50, 50, 200, 200, 20, 20);
+// Set the shape's color to (r, g, b)
+rect->fill(170,253,193);
+// Push the shape into the canvas
+canvas->push(rect);</code></pre>
+                                    </div>
+                                    <p>In the example above, a shape is generated and then a rounded rectangle is appended to it. ThorVG provides predefined shape types such as rectangle, circle and arc for the user's convenience. You can append any custom shape by using Paths. ThorVG allows you to append multiple forms into a shape, to compose a more complex one. A complex shape shares its properties, such as color, stroke, fill, etc., among the appended forms.</p>
+                                    <p>After a rounded rectangle is appended, its color is set and then the shape is pushed to the canvas.</p>
+                                    <p>​This shape from the example looks as follows.</p>
+                                    <div class="example-container">
+                                        <div class="example-frame-square">
+                                            <img src="image/example_shape.png" />
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="path">
+                                    <h3>Path</h3>
+                                    <p>Besides predefined shape types, you can compose arbitrary shape types using a path concept. A path is a list of commands that are commonly used in traditional 2D vector drawing. Below you can see an example of how to define your own forms.</p>
+                                    <div aria-label="code snippet" class="code-snippet not-prose">
+                                        <pre class="prism-code line-numbers"><code class="language-c">// Generate a shape
+auto path = tvg::Shape::gen();        
+// Set the sequential path coordinates
+path->moveTo(199, 34);
+path->lineTo(253, 143);
+path->lineTo(374, 160);
+path->lineTo(287, 244);
+path->lineTo(307, 365);
+path->lineTo(199, 309);
+path->lineTo(97, 365);
+path->lineTo(112, 245);
+path->lineTo(26, 161);
+path->lineTo(146, 143);
+// Complete the path
+path->close();
+// Set the shape's color to (r, g, b)
+path->fill(150, 150, 255);
+// Push the shape into the canvas
+canvas->push(path);</code></pre>
+                                    </div>
+                                    <p>By using the Path, lines and Bezier curves can be drawn. Additionally, you can set preset list using <code><a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Shape.html" target="_blank" rel="noopener noreferrer">Shape</a>::<a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Shape.html#a3588ea30776a747a22b6ee82dadb9717" target="_blank" rel="noopener noreferrer">appendPath</a>()</code> for optimal data delivery.</p>
+                                    <p>The output of the example is as follows.</p>
+                                    <div class="example-container">
+                                        <div class="example-frame-square">
+                                            <img src="image/example_path.png" />
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="fill">
+                                    <h3>Fill</h3>
+                                    <p>Besides predefined shape types, you can compose arbitrary shape types using a path concept. A path is a list of commands that are commonly used in traditional 2D vector drawing. Below you can see an example of how to define your own forms.</p>
+                                    <div aria-label="code snippet" class="code-snippet not-prose">
+                                        <pre class="prism-code line-numbers"><code class="language-c">// Generate a shape
+auto circle = tvg::Shape::gen();
+// Append a circle to the shape (cx, cy, rx, ry)
+circle->appendCircle(200, 200, 100, 100);
+
+// Generate a radial gradient
+auto fill = tvg::RadialGradient::gen();
+// Set the radial gradient geometry info (cx, cy, radius)
+fill->radial(200, 200, 150);
+
+// Gradient colors
+tvg::Fill::ColorStop colorStops[2];
+// 1st color values (offset, r, g, b, a)
+colorStops[0] = {0.0, 255, 255, 255, 255};
+// 2nd color values (offset, r, g, b, a)
+colorStops[1] = {1.0, 0, 0, 0, 255};
+// Set the gradient colors info
+fill->colorStops(colorStops, 2);
+
+// Set the shape fill
+circle->fill(fill);
+
+// Push the shape into the canvas
+canvas->push(circle);</code></pre>
+                                    </div>
+                                    <p>The output of the example is as follows.</p>
+                                    <div class="example-container">
+                                        <div class="example-frame-square">
+                                            <img src="image/example_fill.png" />
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="stroke">
+                                    <h3>Stroke</h3>
+                                    <p>Stroking enables you to draw the outline of shapes as well lines. You can simply add stroke properties to a shape if needed. Stroke supports both a solid color and a gradient fill and also 4 major properties - width, cap, join and dash pattern.</p>
+                                    <div aria-label="code snippet" class="code-snippet not-prose">
+                                        <pre class="prism-code line-numbers"><code class="language-c">// Generate a shape
+auto rect = tvg::Shape::gen();
+// Append a round rectangle to the shape (x, y, w, h, rx, ry)
+rect->appendRect(50, 50, 200, 200, 20, 20);
+// Set the shape's color to (r, g, b)
+rect->fill(100, 100, 100);
+ 
+// Set the stroke's width
+rect->strokeWidth(4);
+// Set the stroke's color to (r, g, b)
+rect->strokeFill(50, 50, 50);
+// Set the stroke's join style
+rect->strokeJoin(tvg::StrokeJoin::Round);
+// Set the stroke's cap style
+rect->strokeCap(tvg::StrokeCap::Round);
+ 
+// Set the stroke's dash pattern (line, gap)
+float pattern[2] = {7, 10};
+// Set the stroke pattern
+rect->strokeDash(pattern, 2);
+
+// Push the shape into the canvas
+canvas->push(rect);</code></pre>
+                                    </div>
+                                    <p>The output of the example is as follows.</p>
+                                    <div class="example-container">
+                                        <div class="example-frame-square">
+                                            <img src="image/example_stroke.png" />
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="scene-and-transformation">
+                                    <h3>Scene and Transformation</h3>
+                                    <p>ThorVG provides an interface to build Paint groups by composing multiple Paints. This is useful when you consider a scene-graph structure and manipulate a scene as a control unit. The code below shows how to use the ThorVG Scene and transform it.</p>
+                                    <div aria-label="code snippet" class="code-snippet not-prose">
+                                        <pre class="prism-code line-numbers"><code class="language-c">// Generate a Scene
+auto scene = tvg::Scene::gen();
+
+// Generate a round rectangle
+auto rect = tvg::Shape::gen();
+rect->appendRect(-235, -250, 400, 400, 50, 50);
+rect->fill(0, 255, 0);
+// Push the rectangle into the scene
+scene->push(rect);
+
+// Generate a circle
+auto circle = tvg::Shape::gen();
+circle->appendCircle(-165, -150, 200, 200);
+// Set the shape's color to (r, g, b, a)
+
+circle->fill(255, 255, 0, 127);
+// Push the circle into the scene
+scene->push(circle);
+
+// Generate an ellipse
+auto ellipse = tvg::Shape::gen();
+ellipse->appendCircle(265, 250, 150, 100);
+ellipse->fill(0, 255, 255);
+// Push the eliipse into the scene
+scene->push(ellipse);
+
+// Transform the scene
+scene->translate(350, 350);
+scene->scale(0.5);
+scene->rotate(45);
+
+// Push the scene into the canvas
+canvas->push(scene);</code></pre>
+                                    </div>
+                                    <p>All kinds of Paint type nodes (Shape, Scene and Picture) can be pushed into the Scene as its children. You can scale this logic and build a complex scene by compositing multiple Scenes. In the example, we create a scene-graph tree and we demonstrate how to transform it using <code><a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Paint.html#ae896f56bfa51c98a50eee3f2bb62e41e" target="_blank" rel="noopener noreferrer">translate</a>()</code>, <code><a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Paint.html#a5c057876185525c5723215f95a3984f2" target="_blank" rel="noopener noreferrer">scale</a>()</code>, <code><a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Paint.html#a7841fa0c14643e09735d48042ead68f3" target="_blank" rel="noopener noreferrer">rotate</a>()</code> methods. ThorVG also supports the <code><a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Paint.html#ac9f6ba428afe884bcc2861de0a2a96f4" target="_blank" rel="noopener noreferrer">transform</a>()</code> method which expects a transformation matrix.</p>
+                                    <p>The output of the example is as follows.</p>
+                                    <div class="example-container">
+                                        <div class="example-frame-square">
+                                            <img src="image/example_scene.png" />
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="picture">
+                                    <h3>Picture</h3>
+                                    <p>The Picture is a special component that is designed to draw a scene on the Canvas from image data. ThorVG supports several image formats including vector-based and bitmap-based formats.</p>
+                                    <div aria-label="code snippet" class="code-snippet not-prose">
+                                        <pre class="prism-code line-numbers"><code class="language-c">// Generate a picture (svg)
+auto svg = tvg::Picture::gen();
+// Load a svg file
+svg->load("logo.svg");
+// Push the picture into the canvas
+canvas->push(svg);
+
+// Generate a picture (png)
+auto png = tvg::Picture::gen();
+// Load a png file
+png->load("parrots.png");
+// Set the desired size
+png->size(300, 300);
+// Set the position
+png->translate(150, 150);
+// Push the picture into the canvas
+canvas->push(png);</code></pre>
+                                    </div>
+                                    <p>The output of the example is as follows.</p>
+                                    <div class="example-container">
+                                        <div class="example-frame-square">
+                                            <img src="image/example_picture.png" />
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="text">
+                                    <h3>Text</h3>
+                                    <p>ThorVG offers robust text rendering capabilities, including support for Scalable TrueType Fonts (TTF). It efficiently handles Unicode text, accepting UTF-8 (or ASCII) characters as input. ThorVG processes these characters by converting them into Unicode codepoints, subsequently generating vector data for the corresponding glyphs. Additionally, ThorVG utilizes the metrics of TTF glyphs to create horizontal layouts, further enhancing its text rendering functionality.</p>
+                                    <div aria-label="code snippet" class="code-snippet not-prose">
+                                        <pre class="prism-code line-numbers"><code class="language-c">// Load a global font data
+Text::load(EXAMPLE_DIR"/arial.ttf");
+
+// Generate a solid color text for displaying
+auto text = tvg::Text::gen();
+// Set the font name and font size
+text->font("Arial", 50);
+// Set the text to display
+text->text("ThorVG Solid Text");
+// Set the text color(r, g, b)
+text->fill(0, 0, 0);
+// Set the position
+text->translate(150, 150);
+// Push the text into the canvas
+canvas->push(text);
+
+// Generate a linear gradient color text for displaying
+auto text2 = tvg::Text::gen();
+// Set the font name and font size
+text2->font("Arial", 50);
+// Set the text to display
+text2->text("ThorVG Gradient Text");
+// Get the text geometry
+float x, y, w, h;
+text2->bounds(&x, &y, &w, &h);
+
+// Generate a linear gradient
+auto fill = tvg::LinearGradient::gen();
+// Set the linear gradient geometry info (x1, y1, x2, y2)
+fill->linear(x, y + h * 0.5f, x + w, y + h * 0.5f);
+// Gradient colors
+tvg::Fill::ColorStop colorStops[2];
+// 1st color values (offset, r, g, b, a)
+colorStops[0] = {0.0, 255, 0, 0, 0};
+// 2nd color values (offset, r, g, b, a)
+colorStops[1] = {1.0, 255, 255, 0, 255};
+// Set the gradient colors info
+fill->colorStops(colorStops, 2);
+
+// Set the text fill
+text2->fill(fill);
+// Set the position
+text2->translate(150, 250);
+// Push the text into the canvas
+canvas->push(text2);</code></pre>
+                                    </div>
+                                    <p>Note that the global font data loaded into ThorVG is typically shared among various text objects. This font data is automatically released when the ThorVG engine is terminated, which is done using <code><a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Initializer.html" target="_blank" rel="noopener noreferrer">Initializer</a>::<a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Initializer.html#ace5ab49a2678becae6e7230420a003df" target="_blank" rel="noopener noreferrer">term</a>()</code>. If you need to immediately free up the font resources, You can manually unload the font data using the <code><a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Text.html" target="_blank" rel="noopener noreferrer">Text</a>::<a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Text.html#a2c3cf96821e59b74399c4c076d66fcc8" target="_blank" rel="noopener noreferrer">unload</a>()</code> API.</p>
+                                    <p>The output of the example is as follows.</p>
+                                    <div class="example-container">
+                                        <div class="example-frame-rectangle">
+                                            <img src="image/example_text.png" />
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="composition">
+                                    <h3>Composition</h3>
+                                    <p>ThorVG applies composition for visual effects such as blending, masking, filtering, etc. You should be aware though, that a composition may perform an additional render-processing on an off-screen buffer. The excessive usage of a composition won't be helpful if lightweight processing is a priority for you. A hint - sometimes you can avoid a composition by changing the application or the design approach while maintaining the same visual effects.</p>
+                                    <div aria-label="code snippet" class="code-snippet not-prose">
+                                        <pre class="prism-code line-numbers"><code class="language-c">// Generate a picture
+auto picture = tvg::Picture::gen();
+picture->load(EXAMPLE_DIR"/logo.svg");
+// Generate a circle for masking
+auto mask = tvg::Shape::gen();
+mask->appendCircle(250, 325, 225, 225);
+mask->fill(255, 255, 255, 255);
+
+// Set the circle's alpha mask to the picture
+picture->mask(mask, tvg::MaskMethod::Alpha);
+// Push the picture into the canvas
+canvas->push(picture);</code></pre>
+                                    </div>
+                                    <p>The output of the example is as follows.</p>
+                                    <div class="example-container">
+                                        <div class="example-frame-square">
+                                            <img src="image/example_masking.png" />
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="animation">
+                                    <h3>Animation</h3>
+                                    <p>The Animation component facilitates the manipulation of animatable elements, such as Lottie. It enables the display and fundamental control of animated frames. Essentially, one animation instance corresponds to a single picture instance. You can assign any animatable resources to the associated picture and play the animation using the animation instance.</p>
+                                    <div aria-label="code snippet" class="code-snippet not-prose">
+                                        <pre class="prism-code line-numbers"><code class="language-c">// Generate an animation
+auto animation = tvg::Animation::gen();
+// Acquire a picture which associated with the animation
+auto picture = animation->picture();
+
+// Load an animation file.
+picture->load("lottie.json");
+// Figure out the animation duration time in seconds
+auto duration = animation->duration();
+
+// Push the picture into the canvas
+canvas->push(picture);</code></pre>
+                                    </div>
+                                    <p>First, an animation and a picture are generated. The Lottie file (lottie.json) is loaded into the picture, and then the picture is added to the canvas. The animation frames are controlled using the animation object to play the Lottie animation. Also you might want to know the animation duration time to run your animation loop.</p>
+                                    <div aria-label="code snippet" class="code-snippet not-prose">
+                                        <pre class="prism-code line-numbers"><code class="language-c">// Set a current animation frame to display
+animation->frame(animation->totalFrame() * progress);
+// Update the picture to be redrawn
+canvas->update(animation->picture());</code></pre>
+                                    </div>
+                                    <p>Let's suppose the progress variable determines the position of the animation, ranging from 0 to 1 based on the total duration time of the animation. Adjusting the progress value allows you to control the animation at the desired position. Afterwards, the canvas is updated to redraw the picture with the updated animation frame.</p>
+                                    <div class="example-container">
+                                        <div class="example-frame-square">
+                                            <img src="image/b144cf_85b677ebb075416c96d81e92ed8374bc~mv2.gif" />
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="drawing-the-final-step">
+                                    <h3>Drawing, the final step</h3>
+                                    <p>Once you've prepared all the paint nodes by pushing them into the canvas, you can request the drawing task as the final step. The <code><a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Canvas.html" target="_blank" rel="noopener noreferrer">Canvas</a>::<a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Canvas.html#a82c5ec1c1ba93cf7671642400074201e" target="_blank" rel="noopener noreferrer">push</a>()</code> API initiates the preprocessing task for the rendering, but it doesn't trigger rasterization. As all the tasks are performed asynchronously under the hood, you must call <code><a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Canvas.html" target="_blank" rel="noopener noreferrer">Canvas</a>::<a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Canvas.html#adbca600af79f9a0b8e8366e3be7450e9" target="_blank" rel="noopener noreferrer">sync</a>()</code> at the optimal time to ensure synchronization. Finally, you will receive a completed image in the target buffer.</p>
+                                    <div aria-label="code snippet" class="code-snippet not-prose">
+                                        <pre class="prism-code line-numbers"><code class="language-c">canvas->draw();
+canvas->sync();</code></pre>
+                                    </div>
+                                    <p>After getting the frame image, you can flush out all the pushed paint nodes from the canvas with <code><a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Canvas.html" target="_blank" rel="noopener noreferrer">Canvas</a>::<a href="https://thorvg.github.io/thorvg/html/classtvg_1_1Canvas.html#a99cdb01cd893f4199b521b754d21aefd" target="_blank" rel="noopener noreferrer">clear</a>()</code> call.</p>
+                                </section>
+                            </section>
+                            <section id="more-examples">
+                                <h2>More examples</h2>
+                                <p>There are plenty of sample code in thorvg/examples to help you in understanding the ThorVG APIs.</p>
+                                <p>To execute these examples, you can build them with the following meson build option.</p>
+                                <div class="code-block">
+                                    <pre class="code-content">meson setup builddir -Dexamples=true</pre>
+                                    <button class="copy-button" type="button" aria-label="Copy to clipboard">
+                                        <span class="copy-icon-wrapper">
+                                            <div>
+                                                <div class="copy-icon active">
+                                                    <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="done-icon">
+                                                    <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5607 3.99999L15.0303 4.53032L6.23744 13.3232C5.55403 14.0066 4.44599 14.0066 3.76257 13.3232L4.2929 12.7929L3.76257 13.3232L0.969676 10.5303L0.439346 9.99999L1.50001 8.93933L2.03034 9.46966L4.82323 12.2626C4.92086 12.3602 5.07915 12.3602 5.17678 12.2626L13.9697 3.46966L14.5 2.93933L15.5607 3.99999Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </button>
+                                </div>
+                                <p>Note that these examples require the SDL dev package for launching. If you're using Linux-based OS, you can easily install this package from your OS distribution server. For Ubuntu, you can install it with this command.</p>
+                                <div class="code-block">
+                                    <pre class="code-content">apt-get install libsdl2-dev</pre>
+                                    <button class="copy-button" type="button" aria-label="Copy to clipboard">
+                                        <span class="copy-icon-wrapper">
+                                            <div>
+                                                <div class="copy-icon active">
+                                                    <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="done-icon">
+                                                    <svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5607 3.99999L15.0303 4.53032L6.23744 13.3232C5.55403 14.0066 4.44599 14.0066 3.76257 13.3232L4.2929 12.7929L3.76257 13.3232L0.969676 10.5303L0.439346 9.99999L1.50001 8.93933L2.03034 9.46966L4.82323 12.2626C4.92086 12.3602 5.07915 12.3602 5.17678 12.2626L13.9697 3.46966L14.5 2.93933L15.5607 3.99999Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </button>
+                                </div>
+                                <p>Alternatively, you can read the official guidance <a href="https://wiki.libsdl.org/SDL2/Installation" target="_blank" rel="noopener noreferrer">here</a> for other platforms. Fore more information, please visit the official <a href="https://www.libsdl.org/" target="_blank" rel="noopener noreferrer">SDL</a> site.</p>
+                            </section>
+                        </article>
+                    </div>
+                    <div class="column is-3">
+                        <div class="content-toc has-background-light py-5">
+                            <nav aria-label="Table of contents" role="navigation">
+                                <ul class="toc-list">
+                                    <li><a class="toc-header" href="#"><i class="icon icon-text-align-left"></i>Table of Contents</a></li>
+                                    <li class="toc-children">
+                                        <ul>
+                                            <li><a href="tutorial/#tutorial">Tutorial</a></li>
+                                            <li><a href="tutorial/#build-and-install">Build and install</a></li>
+                                            <li>
+                                                <ul class="toc-children-list">
+                                                    <li><a href="tutorial/#build-with-visual-studio">Build with Visual Studio</a></li>
+                                                    <li><a href="tutorial/#install-with-vcpkg">Install with vcpkg</a></li>
+                                                    <li><a href="tutorial/#install-with-conan">Install with Conan</a></li>
+                                                    <li><a href="tutorial/#install-with-msys2">Install with MSYS2</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="tutorial/#basic-programming">Basic programming</a></li>
+                                            <li>
+                                                <ul class="toc-children-list">
+                                                    <li><a href="tutorial/#initialization">Initialization</a></li>
+                                                    <li><a href="tutorial/#shape">Shape</a></li>
+                                                    <li><a href="tutorial/#path">Path</a></li>
+                                                    <li><a href="tutorial/#fill">Fill</a></li>
+                                                    <li><a href="tutorial/#stroke">Stroke</a></li>
+                                                    <li><a href="tutorial/#scene-and-transformation">Scene and Transformation</a></li>
+                                                    <li><a href="tutorial/#picture">Picture</a></li>
+                                                    <li><a href="tutorial/#text">Text</a></li>
+                                                    <li><a href="tutorial/#composition">Composition</a></li>
+                                                    <li><a href="tutorial/#animation">Animation</a></li>
+                                                    <li><a href="tutorial/#drawing-the-final-step">Drawing, the final step</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="tutorial/#more-examples">More examples</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="inner">
+                <div class="flex items-baseline tracking-wider">
+                    <div class="logo-wrapper">
+                        <img src="logo/ThorVG_footer.svg" />
+                    </div>
+                    <div class="link-container" style="display: flex;">
+                        <a target="_blank" rel="noopener noreferrer" class="link-item" aria-label="LinkedIn" href="https://www.linkedin.com/company/thorvg/">
+                            <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.582 17.582" overflow="visible">
+                                <path d="M 15.628 0 C 16.146 0 16.643 0.206 17.009 0.572 C 17.376 0.939 17.582 1.435 17.582 1.954 L 17.582 15.628 C 17.582 16.146 17.376 16.643 17.009 17.009 C 16.643 17.376 16.146 17.582 15.628 17.582 L 1.953 17.582 C 1.435 17.582 0.938 17.376 0.572 17.009 C 0.206 16.643 0 16.146 0 15.628 L 0 1.954 C 0 1.435 0.206 0.939 0.572 0.572 C 0.938 0.206 1.435 0 1.953 0 Z M 15.14 15.14 L 15.14 9.963 C 15.14 9.118 14.804 8.309 14.207 7.711 C 13.61 7.114 12.8 6.779 11.956 6.779 C 11.125 6.779 10.158 7.287 9.689 8.048 L 9.689 6.964 L 6.964 6.964 L 6.964 15.14 L 9.689 15.14 L 9.689 10.324 C 9.689 9.572 10.295 8.957 11.047 8.957 C 11.41 8.957 11.758 9.101 12.014 9.357 C 12.271 9.614 12.415 9.962 12.415 10.324 L 12.415 15.14 Z M 3.79 5.431 C 4.225 5.431 4.642 5.258 4.95 4.95 C 5.258 4.642 5.431 4.225 5.431 3.79 C 5.431 2.881 4.698 2.139 3.79 2.139 C 3.352 2.139 2.932 2.313 2.623 2.623 C 2.313 2.932 2.139 3.352 2.139 3.79 C 2.139 4.698 2.881 5.431 3.79 5.431 Z M 5.148 15.14 L 5.148 6.964 L 2.442 6.964 L 2.442 15.14 Z" fill="currentColor"></path>
+                            </svg>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" class="link-item" aria-label="Github" href="https://github.com/thorvg/thorvg">
+                            <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 19.535 19.062" overflow="visible">
+                                <path d="M 9.767 0 C 8.485 0 7.215 0.253 6.03 0.744 C 4.845 1.234 3.768 1.954 2.861 2.861 C 1.029 4.693 0 7.177 0 9.768 C 0 14.085 2.803 17.748 6.681 19.047 C 7.169 19.125 7.326 18.822 7.326 18.558 L 7.326 16.908 C 4.62 17.494 4.044 15.599 4.044 15.599 C 3.594 14.466 2.96 14.163 2.96 14.163 C 2.071 13.557 3.028 13.577 3.028 13.577 C 4.005 13.645 4.522 14.583 4.522 14.583 C 5.372 16.068 6.808 15.628 7.365 15.394 C 7.453 14.759 7.707 14.329 7.98 14.085 C 5.812 13.841 3.536 13.001 3.536 9.279 C 3.536 8.195 3.907 7.326 4.542 6.632 C 4.444 6.388 4.102 5.372 4.64 4.054 C 4.64 4.054 5.46 3.79 7.326 5.05 C 8.097 4.835 8.937 4.727 9.767 4.727 C 10.598 4.727 11.438 4.835 12.209 5.05 C 14.075 3.79 14.895 4.054 14.895 4.054 C 15.433 5.372 15.091 6.388 14.993 6.632 C 15.628 7.326 15.999 8.195 15.999 9.279 C 15.999 13.01 13.714 13.831 11.535 14.075 C 11.887 14.378 12.209 14.974 12.209 15.882 L 12.209 18.558 C 12.209 18.822 12.366 19.135 12.864 19.047 C 16.741 17.738 19.535 14.085 19.535 9.768 C 19.535 8.485 19.282 7.215 18.791 6.03 C 18.301 4.845 17.581 3.768 16.674 2.861 C 15.767 1.954 14.69 1.234 13.505 0.744 C 12.32 0.253 11.05 0 9.767 0 Z" fill="currentColor"></path>
+                            </svg>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" class="link-item" aria-label="Discord" href="https://discord.com/channels/1065834877586509835/1065834878056284287">
+                            <svg width="24" height="24" fill="currentColor" viewBox="-10.63 -.07077792 823.87 610.06955549" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m678.27 51.62c90.35 132.84 134.97 282.68 118.29 455.18-.07.73-.45 1.4-1.05 1.84-68.42 50.24-134.71 80.73-200.07 100.95a2.55 2.55 0 0 1 -2.81-.95c-15.1-21.01-28.82-43.16-40.84-66.42-.69-1.37-.06-3.02 1.36-3.56 21.79-8.21 42.51-18.05 62.44-29.7 1.57-.92 1.67-3.17.22-4.25-4.23-3.14-8.42-6.44-12.43-9.74-.75-.61-1.76-.73-2.61-.32-129.39 59.75-271.13 59.75-402.05 0-.85-.38-1.86-.25-2.59.35-4 3.3-8.2 6.57-12.39 9.71-1.45 1.08-1.33 3.33.25 4.25 19.93 11.43 40.65 21.49 62.41 29.74 1.41.54 2.08 2.15 1.38 3.52-11.76 23.29-25.48 45.44-40.86 66.45-.67.85-1.77 1.24-2.81.92-65.05-20.22-131.34-50.71-199.76-100.95-.57-.44-.98-1.14-1.04-1.87-13.94-149.21 14.47-300.29 118.18-455.18.25-.41.63-.73 1.07-.92 51.03-23.42 105.7-40.65 162.84-50.49 1.04-.16 2.08.32 2.62 1.24 7.06 12.5 15.13 28.53 20.59 41.63 60.23-9.2 121.4-9.2 182.89 0 5.46-12.82 13.25-29.13 20.28-41.63a2.47 2.47 0 0 1 2.62-1.24c57.17 9.87 111.84 27.1 162.83 50.49.45.19.82.51 1.04.95zm-339.04 283.7c.63-44.11-31.53-80.61-71.9-80.61-40.04 0-71.89 36.18-71.89 80.61 0 44.42 32.48 80.6 71.89 80.6 40.05 0 71.9-36.18 71.9-80.6zm265.82 0c.63-44.11-31.53-80.61-71.89-80.61-40.05 0-71.9 36.18-71.9 80.61 0 44.42 32.48 80.6 71.9 80.6 40.36 0 71.89-36.18 71.89-80.6z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" class="link-item" aria-label="ChatGPT" href="https://chatgpt.com/g/g-Ht3dYIwLO-thorvgpt">
+                            <svg width="24" height="24" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="0.7" class="h-6 w-6" viewBox="-0.17090198558635983 0.482230148717937 41.14235318283891 40.0339509076386">
+                                <path d="M37.532 16.87a9.963 9.963 0 0 0-.856-8.184 10.078 10.078 0 0 0-10.855-4.835A9.964 9.964 0 0 0 18.306.5a10.079 10.079 0 0 0-9.614 6.977 9.967 9.967 0 0 0-6.664 4.834 10.08 10.08 0 0 0 1.24 11.817 9.965 9.965 0 0 0 .856 8.185 10.079 10.079 0 0 0 10.855 4.835 9.965 9.965 0 0 0 7.516 3.35 10.078 10.078 0 0 0 9.617-6.981 9.967 9.967 0 0 0 6.663-4.834 10.079 10.079 0 0 0-1.243-11.813zM22.498 37.886a7.474 7.474 0 0 1-4.799-1.735c.061-.033.168-.091.237-.134l7.964-4.6a1.294 1.294 0 0 0 .655-1.134V19.054l3.366 1.944a.12.12 0 0 1 .066.092v9.299a7.505 7.505 0 0 1-7.49 7.496zM6.392 31.006a7.471 7.471 0 0 1-.894-5.023c.06.036.162.099.237.141l7.964 4.6a1.297 1.297 0 0 0 1.308 0l9.724-5.614v3.888a.12.12 0 0 1-.048.103l-8.051 4.649a7.504 7.504 0 0 1-10.24-2.744zM4.297 13.62A7.469 7.469 0 0 1 8.2 10.333c0 .068-.004.19-.004.274v9.201a1.294 1.294 0 0 0 .654 1.132l9.723 5.614-3.366 1.944a.12.12 0 0 1-.114.01L7.04 23.856a7.504 7.504 0 0 1-2.743-10.237zm27.658 6.437l-9.724-5.615 3.367-1.943a.121.121 0 0 1 .113-.01l8.052 4.648a7.498 7.498 0 0 1-1.158 13.528v-9.476a1.293 1.293 0 0 0-.65-1.132zm3.35-5.043c-.059-.037-.162-.099-.236-.141l-7.965-4.6a1.298 1.298 0 0 0-1.308 0l-9.723 5.614v-3.888a.12.12 0 0 1 .048-.103l8.05-4.645a7.497 7.497 0 0 1 11.135 7.763zm-21.063 6.929l-3.367-1.944a.12.12 0 0 1-.065-.092v-9.299a7.497 7.497 0 0 1 12.293-5.756 6.94 6.94 0 0 0-.236.134l-7.965 4.6a1.294 1.294 0 0 0-.654 1.132l-.006 11.225zm1.829-3.943l4.33-2.501 4.332 2.5v5l-4.331 2.5-4.331-2.5V18z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" class="link-item" aria-label="MailBox" href="mailto:thorvg@thorvg.org?subject=Hello%2C%20ThorVG!">
+                            <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256l0 32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32l0 80 0 32c0 17.7 14.3 32 32 32s32-14.3 32-32l0-32c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="tracking-wider copyright">
+                    <p>© 2020–2025 The ThorVG Project. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <button id="to-top-btn" aria-label="To top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" alt="Scroll to top"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z" fill="currentColor"/>
+            </svg>
+        </button>
+
+    </body>
+</html>

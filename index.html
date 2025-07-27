@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <base href="/thorvg.homepage/" />
+        <link rel="icon" sizes="192x192" href="https://raw.githubusercontent.com/ol-of/thorvg.homepage/main/icon/site_icon.png" type="image/png">
+        <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ol-of/thorvg.homepage/main/icon/site_icon.png" type="image/png">
+
+        <title>ThorVG | Thor Vector Graphics</title>
+        <meta name="description" content="&ZeroWidthSpace;Thor Vector Graphics (ThorVG) is an open-source, lightweight, and portable library designed for rendering vector-based scenes and animations, including SVG and Lottie formats. It offers user-friendly APIs, making it versatile for use across different software platforms and applications to visualize graphical content. As the vector graphics rendering engine for Tizen OS, the Godot Platform, LVGL and the dotLottie player, ThorVG powers a wide range of products.">
+        <link rel="canonical" href="https://www.thorvg.org">
+        <meta property="og:title" content="ThorVG | Thor Vector Graphics">
+        <meta property="og:description" content="&ZeroWidthSpace;Thor Vector Graphics (ThorVG) is an open-source, lightweight, and portable library designed for rendering vector-based scenes and animations, including SVG and Lottie formats. It offers user-friendly APIs, making it versatile for use across different software platforms and applications to visualize graphical content. As the vector graphics rendering engine for Tizen OS, the Godot Platform, LVGL and the dotLottie player, ThorVG powers a wide range of products.">
+        <meta property="og:image" content="https://raw.githubusercontent.com/ol-of/thorvg.homepage/main/image/homepage_preview.png">
+        <meta property="og:image:width" content="844">
+        <meta property="og:image:height" content="513">
+        <meta property="og:url" content="https://www.thorvg.org">
+        <meta property="og:site_name" content="ThorVG">
+        <meta property="og:type" content="website">
+        <script type="application/ld+json">{"@context":"https://schema.org/","@type":"WebSite","name":"ThorVG","url":"https://www.thorvg.org"}</script>
+        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"ThorVG","alternateName":["Thor Vector Graphics","토르 벡터 그래픽스","토르VG"],"url":"https://www.thorvg.org/","sameAs":["https://www.linkedin.com/company/thorvg/"],"description":"Thor Vector Graphics is a lightweight portable library used for drawing vector-based scenes and animations including SVG and Lottie. It can be freely utilized across various software platforms and applications to visualize graphical contents.","applicationCategory":"GraphicsApplication","operatingSystem":"Linux, Windows, macOS, iOS, Android, WebAssembly, RTOS, Embedded","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"910"},"potentialAction":{"@type":"SearchAction","target":"https://www.thorvg.org/?s={search_term_string}","query-input":"required name=search_term_string"},"inLanguage":"en","publisher":{"@type":"Organization","name":"ThorVG Project","alternateName":"토르 벡터 그래픽스","url":"https://www.thorvg.org/","sameAs":["https://www.linkedin.com/company/thorvg/","https://github.com/thorvg/"],"founder":{"@id":"#hermet"}},"creator":{"@id":"#hermet"}},{"@type":"SoftwareSourceCode","name":"ThorVG","codeRepository":"https://github.com/thorvg/thorvg","programmingLanguage":"C++","license":"https://opensource.org/licenses/MIT"},{"@type":"Person","@id":"#hermet","name":"Hermet Park","alternateName":["박춘언","hermetpark","hermet"],"sameAs":["https://github.com/hermet","https://www.linkedin.com/in/hermetpark/","https://ko.wikipedia.org/wiki/%EB%B0%95%EC%B6%98%EC%96%B8","https://x.com/hermetpark","https://www.facebook.com/hermetpark/"]},{"@type":"CreativeWork","name":"UI 시스템 블랙북","author":{"@id":"#hermet"},"url":"https://ebook.insightbook.co.kr/book/159","inLanguage":"ko","description":"UI와 그래픽스 시스템 개발 분야에 처음 발을 딛는 분들을 위한 가이드로, 시스템 구조, 상호작용, OS, 윈도우 시스템, 그래픽스 프레임워크, 위젯 시스템 등 중요한 개념을 소개"}]}</script>
+        <meta name="google-site-verification" content="FrbPZFsiXPYTcN9PHwAaU_2jkQYf65He8meFdDsFHwc">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="ThorVG | Thor Vector Graphics">
+        <meta name="twitter:description" content="&ZeroWidthSpace;Thor Vector Graphics (ThorVG) is an open-source, lightweight, and portable library designed for rendering vector-based scenes and animations, including SVG and Lottie formats. It offers user-friendly APIs, making it versatile for use across different software platforms and applications to visualize graphical content. As the vector graphics rendering engine for Tizen OS, the Godot Platform, LVGL and the dotLottie player, ThorVG powers a wide range of products.">
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/ol-of/thorvg.homepage/main/image/homepage_preview.png">
+        <meta name="format-detection" content="telephone=no">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/common.css">
+        <link rel="stylesheet" href="styles/nav.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <link rel="stylesheet" href="styles/home.css">
+
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <button class="menu-toggle" aria-label="Open menu"><img class="menu-icon" src="icon/menu.svg" alt="Menu" /></button>
+
+            <nav class="menu">
+                <a href="about/" class="menu-item"><span class="menu-bg">About</span></a>
+                <a href="tutorial/" class="menu-item"><span class="menu-bg">Tutorial</span></a>
+                <a href="reference/" class="menu-item"><span class="menu-bg">Reference</span></a>
+                <a href="https://deepwiki.com/thorvg/thorvg" target="_blank" rel="noopener noreferrer" class="menu-item">
+                    <span class="menu-bg">Docs<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="25" viewBox="0 0 24 25" stroke="currentColor" role="presentation"><path d="M7 17.0293L17 7.0293"></path><path d="M7 7.0293H17V17.0293"></path></svg></span>
+                </a>
+                <a href="https://github.com/thorvg/thorvg/releases" target="_blank" rel="noopener noreferrer" class="menu-item">
+                    <span class="menu-bg">Releases<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="25" viewBox="0 0 24 25" stroke="currentColor" role="presentation"><path d="M7 17.0293L17 7.0293"></path><path d="M7 7.0293H17V17.0293"></path></svg></span>
+                </a>
+                <a href="viewer/" class="menu-item"><span class="menu-bg">Viewer</span></a>
+            </nav>
+        </header>
+
+        <nav class="menu-drawer">
+            <a href="./" class="is-selected">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" style="margin-right: 20px; transform: rotate(180deg);">
+                    <rect width="256" height="256" fill="none"></rect><line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line><polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline>
+                </svg>
+                Home
+            </a>
+            <a href="about/">About</a>
+            <a href="tutorial/">Tutorial</a>
+            <a href="reference/">Reference</a>
+            <a href="https://deepwiki.com/thorvg/thorvg" target="_blank" rel="noopener noreferrer">
+                Docs<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="25" viewBox="0 0 24 25" stroke="currentColor" role="presentation"><path d="M7 17.0293L17 7.0293"></path><path d="M7 7.0293H17V17.0293"></path></svg>
+            </a>
+            <a href="https://github.com/thorvg/thorvg/releases" target="_blank" rel="noopener noreferrer">
+                Releases<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="25" viewBox="0 0 24 25" stroke="currentColor" role="presentation"><path d="M7 17.0293L17 7.0293"></path><path d="M7 7.0293H17V17.0293"></path></svg>
+            </a>
+            <a href="viewer/">Viewer</a>
+        </nav>
+
+        <main class="main-layout">
+            <div class="main-content">
+                <div class="columns">
+                    <div class="margin-bottom margin-small-medium">
+                        <h1 class="header-h1" style="font-size: 6vw;">
+                            <span class="thor-text">THOR </span>
+                            <span class="header-h1-linebreak">Vector Graphics</span>
+                        </h1>
+                    </div>
+                    <div class="h2-wrapper margin-bottom margin-large">
+                        <h2 class="header-h2">Super Lightweight Engine</h2>
+                    </div>
+                    <div>
+                        <div class="text-body"><p>Thor Vector Graphics is an open-source, lightweight, and portable library designed for rendering vector-based scenes and animations, including SVG and Lottie formats. It offers user-friendly APIs, making it versatile for use across different software platforms and applications to visualize graphical content. As the vector graphics rendering engine for Tizen OS, Godot Platform, LVGL, Lottie Creator and the dotLottie player, ThorVG powers a wide range of products.</p></div>
+                    </div>
+                </div>
+                <div class="w-layout-hflex buttons-wrapper is-relative">
+                    <a href="about/" class="button-content is-large-primary click_demo w-inline-block">
+                        <div>Learn More</div>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="inner">
+                <div class="flex items-baseline tracking-wider">
+                    <div class="logo-wrapper">
+                        <img src="logo/ThorVG_footer.svg" />
+                    </div>
+                    <div class="link-container" style="display: flex;">
+                        <a target="_blank" rel="noopener noreferrer" class="link-item" aria-label="LinkedIn" href="https://www.linkedin.com/company/thorvg/">
+                            <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.582 17.582" overflow="visible">
+                                <path d="M 15.628 0 C 16.146 0 16.643 0.206 17.009 0.572 C 17.376 0.939 17.582 1.435 17.582 1.954 L 17.582 15.628 C 17.582 16.146 17.376 16.643 17.009 17.009 C 16.643 17.376 16.146 17.582 15.628 17.582 L 1.953 17.582 C 1.435 17.582 0.938 17.376 0.572 17.009 C 0.206 16.643 0 16.146 0 15.628 L 0 1.954 C 0 1.435 0.206 0.939 0.572 0.572 C 0.938 0.206 1.435 0 1.953 0 Z M 15.14 15.14 L 15.14 9.963 C 15.14 9.118 14.804 8.309 14.207 7.711 C 13.61 7.114 12.8 6.779 11.956 6.779 C 11.125 6.779 10.158 7.287 9.689 8.048 L 9.689 6.964 L 6.964 6.964 L 6.964 15.14 L 9.689 15.14 L 9.689 10.324 C 9.689 9.572 10.295 8.957 11.047 8.957 C 11.41 8.957 11.758 9.101 12.014 9.357 C 12.271 9.614 12.415 9.962 12.415 10.324 L 12.415 15.14 Z M 3.79 5.431 C 4.225 5.431 4.642 5.258 4.95 4.95 C 5.258 4.642 5.431 4.225 5.431 3.79 C 5.431 2.881 4.698 2.139 3.79 2.139 C 3.352 2.139 2.932 2.313 2.623 2.623 C 2.313 2.932 2.139 3.352 2.139 3.79 C 2.139 4.698 2.881 5.431 3.79 5.431 Z M 5.148 15.14 L 5.148 6.964 L 2.442 6.964 L 2.442 15.14 Z" fill="currentColor"></path>
+                            </svg>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" class="link-item" aria-label="Github" href="https://github.com/thorvg/thorvg">
+                            <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 19.535 19.062" overflow="visible">
+                                <path d="M 9.767 0 C 8.485 0 7.215 0.253 6.03 0.744 C 4.845 1.234 3.768 1.954 2.861 2.861 C 1.029 4.693 0 7.177 0 9.768 C 0 14.085 2.803 17.748 6.681 19.047 C 7.169 19.125 7.326 18.822 7.326 18.558 L 7.326 16.908 C 4.62 17.494 4.044 15.599 4.044 15.599 C 3.594 14.466 2.96 14.163 2.96 14.163 C 2.071 13.557 3.028 13.577 3.028 13.577 C 4.005 13.645 4.522 14.583 4.522 14.583 C 5.372 16.068 6.808 15.628 7.365 15.394 C 7.453 14.759 7.707 14.329 7.98 14.085 C 5.812 13.841 3.536 13.001 3.536 9.279 C 3.536 8.195 3.907 7.326 4.542 6.632 C 4.444 6.388 4.102 5.372 4.64 4.054 C 4.64 4.054 5.46 3.79 7.326 5.05 C 8.097 4.835 8.937 4.727 9.767 4.727 C 10.598 4.727 11.438 4.835 12.209 5.05 C 14.075 3.79 14.895 4.054 14.895 4.054 C 15.433 5.372 15.091 6.388 14.993 6.632 C 15.628 7.326 15.999 8.195 15.999 9.279 C 15.999 13.01 13.714 13.831 11.535 14.075 C 11.887 14.378 12.209 14.974 12.209 15.882 L 12.209 18.558 C 12.209 18.822 12.366 19.135 12.864 19.047 C 16.741 17.738 19.535 14.085 19.535 9.768 C 19.535 8.485 19.282 7.215 18.791 6.03 C 18.301 4.845 17.581 3.768 16.674 2.861 C 15.767 1.954 14.69 1.234 13.505 0.744 C 12.32 0.253 11.05 0 9.767 0 Z" fill="currentColor"></path>
+                            </svg>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" class="link-item" aria-label="Discord" href="https://discord.com/channels/1065834877586509835/1065834878056284287">
+                            <svg width="24" height="24" fill="currentColor" viewBox="-10.63 -.07077792 823.87 610.06955549" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m678.27 51.62c90.35 132.84 134.97 282.68 118.29 455.18-.07.73-.45 1.4-1.05 1.84-68.42 50.24-134.71 80.73-200.07 100.95a2.55 2.55 0 0 1 -2.81-.95c-15.1-21.01-28.82-43.16-40.84-66.42-.69-1.37-.06-3.02 1.36-3.56 21.79-8.21 42.51-18.05 62.44-29.7 1.57-.92 1.67-3.17.22-4.25-4.23-3.14-8.42-6.44-12.43-9.74-.75-.61-1.76-.73-2.61-.32-129.39 59.75-271.13 59.75-402.05 0-.85-.38-1.86-.25-2.59.35-4 3.3-8.2 6.57-12.39 9.71-1.45 1.08-1.33 3.33.25 4.25 19.93 11.43 40.65 21.49 62.41 29.74 1.41.54 2.08 2.15 1.38 3.52-11.76 23.29-25.48 45.44-40.86 66.45-.67.85-1.77 1.24-2.81.92-65.05-20.22-131.34-50.71-199.76-100.95-.57-.44-.98-1.14-1.04-1.87-13.94-149.21 14.47-300.29 118.18-455.18.25-.41.63-.73 1.07-.92 51.03-23.42 105.7-40.65 162.84-50.49 1.04-.16 2.08.32 2.62 1.24 7.06 12.5 15.13 28.53 20.59 41.63 60.23-9.2 121.4-9.2 182.89 0 5.46-12.82 13.25-29.13 20.28-41.63a2.47 2.47 0 0 1 2.62-1.24c57.17 9.87 111.84 27.1 162.83 50.49.45.19.82.51 1.04.95zm-339.04 283.7c.63-44.11-31.53-80.61-71.9-80.61-40.04 0-71.89 36.18-71.89 80.61 0 44.42 32.48 80.6 71.89 80.6 40.05 0 71.9-36.18 71.9-80.6zm265.82 0c.63-44.11-31.53-80.61-71.89-80.61-40.05 0-71.9 36.18-71.9 80.61 0 44.42 32.48 80.6 71.9 80.6 40.36 0 71.89-36.18 71.89-80.6z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" class="link-item" aria-label="ChatGPT" href="https://chatgpt.com/g/g-Ht3dYIwLO-thorvgpt">
+                            <svg width="24" height="24" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="0.7" class="h-6 w-6" viewBox="-0.17090198558635983 0.482230148717937 41.14235318283891 40.0339509076386">
+                                <path d="M37.532 16.87a9.963 9.963 0 0 0-.856-8.184 10.078 10.078 0 0 0-10.855-4.835A9.964 9.964 0 0 0 18.306.5a10.079 10.079 0 0 0-9.614 6.977 9.967 9.967 0 0 0-6.664 4.834 10.08 10.08 0 0 0 1.24 11.817 9.965 9.965 0 0 0 .856 8.185 10.079 10.079 0 0 0 10.855 4.835 9.965 9.965 0 0 0 7.516 3.35 10.078 10.078 0 0 0 9.617-6.981 9.967 9.967 0 0 0 6.663-4.834 10.079 10.079 0 0 0-1.243-11.813zM22.498 37.886a7.474 7.474 0 0 1-4.799-1.735c.061-.033.168-.091.237-.134l7.964-4.6a1.294 1.294 0 0 0 .655-1.134V19.054l3.366 1.944a.12.12 0 0 1 .066.092v9.299a7.505 7.505 0 0 1-7.49 7.496zM6.392 31.006a7.471 7.471 0 0 1-.894-5.023c.06.036.162.099.237.141l7.964 4.6a1.297 1.297 0 0 0 1.308 0l9.724-5.614v3.888a.12.12 0 0 1-.048.103l-8.051 4.649a7.504 7.504 0 0 1-10.24-2.744zM4.297 13.62A7.469 7.469 0 0 1 8.2 10.333c0 .068-.004.19-.004.274v9.201a1.294 1.294 0 0 0 .654 1.132l9.723 5.614-3.366 1.944a.12.12 0 0 1-.114.01L7.04 23.856a7.504 7.504 0 0 1-2.743-10.237zm27.658 6.437l-9.724-5.615 3.367-1.943a.121.121 0 0 1 .113-.01l8.052 4.648a7.498 7.498 0 0 1-1.158 13.528v-9.476a1.293 1.293 0 0 0-.65-1.132zm3.35-5.043c-.059-.037-.162-.099-.236-.141l-7.965-4.6a1.298 1.298 0 0 0-1.308 0l-9.723 5.614v-3.888a.12.12 0 0 1 .048-.103l8.05-4.645a7.497 7.497 0 0 1 11.135 7.763zm-21.063 6.929l-3.367-1.944a.12.12 0 0 1-.065-.092v-9.299a7.497 7.497 0 0 1 12.293-5.756 6.94 6.94 0 0 0-.236.134l-7.965 4.6a1.294 1.294 0 0 0-.654 1.132l-.006 11.225zm1.829-3.943l4.33-2.501 4.332 2.5v5l-4.331 2.5-4.331-2.5V18z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" class="link-item" aria-label="MailBox" href="mailto:thorvg@thorvg.org?subject=Hello%2C%20ThorVG!">
+                            <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256l0 32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32l0 80 0 32c0 17.7 14.3 32 32 32s32-14.3 32-32l0-32c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="tracking-wider copyright">
+                    <p>© 2020–2025 The ThorVG Project. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            /* menu-drawer가 open 되면 header의 색상을 흰색으로 */
+            const drawer = document.querySelector('.menu-drawer');
+            const header = document.querySelector('header');
+
+            const observer = new MutationObserver(() => {
+                if (drawer.classList.contains('open')) {
+                    header.classList.add('has-background');
+                } else {
+                    header.classList.remove('has-background');
+                }
+            });
+
+            observer.observe(drawer, { attributes: true, attributeFilter: ['class'] });
+
+            window.addEventListener('resize', () => {
+                if (drawer.classList.contains('open')) {
+                    const menuToggle = document.querySelector('.menu-toggle');
+                    menuToggle.click();
+                }
+            });
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const menu = document.querySelector('header .menu');
+                const rootStyles = getComputedStyle(document.documentElement);
+                const headerHeight = parseInt(rootStyles.getPropertyValue('--header-height')) || 60;
+
+                window.addEventListener('scroll', () => {
+                if (window.scrollY >= headerHeight) {
+                    menu.classList.add('scrolled');
+                } else {
+                    menu.classList.remove('scrolled');
+                }
+                });
+            });
+        </script>
+    </body>
+</html>

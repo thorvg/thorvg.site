@@ -1,0 +1,207 @@
+:root {
+  --upload-height: 5rem;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 320px; /* 왼쪽은 자동 확장, 오른쪽은 고정 320px */
+  height: calc(100vh - var(--header-height));
+  width: 100%;
+}
+
+.preview {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--header-height));
+  background-color: #171717;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-controls {
+  flex: 1; /* 남는 공간을 모두 차지 */
+  overflow-y: auto;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+h2.ctrl-title {
+  margin: 0;
+  flex: 1;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.03125rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(255, 255, 255, 0.89);
+}
+
+h4.ctrl-description {
+  font-weight: 600;
+  line-height: 1rem;
+  font-size: 0.875rem;
+  color: #6B6B6B;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  margin: 0;
+}
+
+.control-item:last-of-type {
+  border-bottom-width: 1px;
+}
+
+.item-expand {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 3rem;
+}
+
+.expand-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  transition: all 0.2s;
+  font-size: 1rem;
+  margin-right: 0.375rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  padding: 0;
+}
+
+.expand-button:hover {
+  color: var(--hover-color);
+  background-color: #242424;
+}
+
+.expand-icon {
+  stroke: currentcolor;
+  fill: none;
+  width: 1rem;
+  height: 1rem;
+  font-size: calc(1.5rem);
+  transform: rotate(180deg);
+  transition: transform 0.25s;
+}
+
+svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.section-upload {
+  background: #242424;
+  padding: 1.25rem 1rem;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.inner-container {
+  width: 100%;
+  padding-top: 1.25rem;
+}
+
+.inner-container.column {
+  padding-top: 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.slider-wrapper {
+  display: flex;
+  width: 100%;
+  height: 2.25rem;
+  margin-top: 0.625rem;
+}
+
+.ctrl-slider {
+  position: relative;
+  touch-action: none;
+  user-select: none;
+  outline: 0px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  cursor: pointer;
+}
+
+.ctrl-dropdown {
+  display: inline-flex;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
+  width: auto;
+  border-radius: 0.5rem;
+  height: 3rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+  background: rgba(255, 255, 255, 0.075);
+  text-align: left;
+  border: none;
+  flex: 1;
+}
+
+.inner-container.row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+
+button {
+  padding: 0px;
+  text-transform: none;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+.ctrl-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.075);
+  color: #FFFFFF;
+  border: #FFFFFF;
+  border-radius: 0.5rem;
+  height: 2.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  flex: 1;
+}
+
+.ctrl-button:hover {
+  color: var(--hover-color);
+  background-color: rgba(255,255,255,0.125);
+}
