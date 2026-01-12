@@ -1,0 +1,5 @@
+<map id="Picture" name="Picture">
+<area shape="rect" id="Node000001" title="A class representing an image read in one of the supported formats: raw, svg, png,..." alt="" coords="5,79,72,104"/>
+<area shape="rect" id="Node000002" href="$structtvg_1_1Paint.html" title="An abstract class for managing graphical elements." alt="" coords="11,5,66,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="41,44,41,79,36,79,36,44"/>
+</map>

@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['darken_296',['Darken',['../group__ThorVG.html#gga4dd2f3776540c10b565e0446aa8e9e02af367cda25ead743bb0d2ab9c217e0b99',1,'tvg']]],
-  ['darkenmask_297',['DarkenMask',['../group__ThorVG.html#ggaabdf94ada64e69d06deabc5aa6576f87a7315f3a075b106b0dd81f1f533227ae8',1,'tvg']]],
-  ['default_298',['Default',['../classtvg_1_1SwCanvas.html#a9b9770837f0171b15f0cd86f94e8e22ba79935518a3889663d8688b6b01fff051',1,'tvg::SwCanvas']]],
-  ['difference_299',['Difference',['../group__ThorVG.html#gga4dd2f3776540c10b565e0446aa8e9e02a28ed2ac6c29f64a3692c956004b8ff7a',1,'tvg']]],
-  ['differencemask_300',['DifferenceMask',['../group__ThorVG.html#ggaabdf94ada64e69d06deabc5aa6576f87a8c6c379355c2381e10645dbd19f29884',1,'tvg']]]
+  ['darken_0',['darken',['../group__ThorVG.html#ggaaf95c5225fd998fd34dc0429d0c31b1daf367cda25ead743bb0d2ab9c217e0b99',1,'Darkentvg'],['../group__ThorVG.html#gga4dd2f3776540c10b565e0446aa8e9e02af367cda25ead743bb0d2ab9c217e0b99',1,'Darkentvg']]],
+  ['default_1',['Default',['../group__ThorVG.html#gga02be441d9536f40ebdd8550f92af7dc6a7a1920d61156abc05a60135aefe8bc67',1,'tvg']]],
+  ['difference_2',['difference',['../group__ThorVG.html#ggaaf95c5225fd998fd34dc0429d0c31b1da28ed2ac6c29f64a3692c956004b8ff7a',1,'Differencetvg'],['../group__ThorVG.html#gga4dd2f3776540c10b565e0446aa8e9e02a28ed2ac6c29f64a3692c956004b8ff7a',1,'Differencetvg']]],
+  ['dropshadow_3',['DropShadow',['../group__ThorVG.html#gga8100e9db83ed1fbb3dd595ba3bddfae5a62fb0c043d7459d6590e00540884ea62',1,'tvg']]]
 ];

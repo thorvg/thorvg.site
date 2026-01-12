@@ -1,0 +1,5 @@
+<map id="Text" name="Text">
+<area shape="rect" id="Node000001" title="A class to represent text objects in a graphical context, allowing for rendering and manipulation of ..." alt="" coords="8,79,57,104"/>
+<area shape="rect" id="Node000002" href="$structtvg_1_1Paint.html" title="An abstract class for managing graphical elements." alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="35,44,35,79,30,79,30,44"/>
+</map>

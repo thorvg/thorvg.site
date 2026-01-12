@@ -1,14 +1,12 @@
 var searchData=
 [
-  ['pad_102',['Pad',['../group__ThorVG.html#gga0cfa2c92260cca776292cc9e8964f2daade43468adaf6acb2c38ebc0c1176f82f',1,'tvg']]],
-  ['paint_103',['paint',['../classtvg_1_1Picture.html#aeaff657c918ea2a3d984478a5e981ea2',1,'tvg::Picture']]],
-  ['paint_104',['Paint',['../classtvg_1_1Paint.html',1,'tvg']]],
-  ['paints_105',['paints',['../classtvg_1_1Canvas.html#ace6c268f853a4c144076de89b7bbbe75',1,'tvg::Canvas::paints()'],['../classtvg_1_1Scene.html#ace6c268f853a4c144076de89b7bbbe75',1,'tvg::Scene::paints()']]],
-  ['pathcommand_106',['PathCommand',['../group__ThorVG.html#ga6876ed676934f4dbcc19b1b53c153cc1',1,'tvg']]],
-  ['pathcommands_107',['pathCommands',['../classtvg_1_1Shape.html#ac14d90c2c0130b66a9a33eb7d08101b7',1,'tvg::Shape']]],
-  ['pathcoords_108',['pathCoords',['../classtvg_1_1Shape.html#a818b1b358f0ed7ba448b6d804e087923',1,'tvg::Shape']]],
-  ['picture_109',['picture',['../classtvg_1_1Animation.html#a004ba625c58005c931b244fb2515624f',1,'tvg::Animation']]],
-  ['picture_110',['Picture',['../group__ThorVG.html#gga5f787df9cdf370248382504196841479a8ae5811be1a55b9b8447ad2dbdadbf6e',1,'Picture()tvg'],['../classtvg_1_1Picture.html',1,'Picture']]],
-  ['point_111',['Point',['../structtvg_1_1Point.html',1,'tvg']]],
-  ['push_112',['push',['../classtvg_1_1Canvas.html#a82c5ec1c1ba93cf7671642400074201e',1,'tvg::Canvas::push()'],['../classtvg_1_1Scene.html#a19240cd5b53571da718fabef8afb7103',1,'tvg::Scene::push(std::unique_ptr&lt; Paint &gt; paint) noexcept'],['../classtvg_1_1Scene.html#a8c4d96805c51d1e1876458ad84708925',1,'tvg::Scene::push(SceneEffect effect,...) noexcept']]]
+  ['pad_0',['Pad',['../group__ThorVG.html#gga9dc091ab88de1789c1fc010072fcee24ade43468adaf6acb2c38ebc0c1176f82f',1,'tvg']]],
+  ['paint_1',['paint',['../structtvg_1_1Paint.html',1,'Paint'],['../structtvg_1_1Picture.html#a346d8ec8b1b89fb96ae2c14950b4f12e',1,'tvg::Picture::paint()']]],
+  ['paints_2',['paints',['../structtvg_1_1Canvas.html#aa6a957e00207e32c26d8f8291d1b4fc8',1,'tvg::Canvas::paints()'],['../structtvg_1_1Scene.html#aa6a957e00207e32c26d8f8291d1b4fc8',1,'tvg::Scene::paints()']]],
+  ['parent_3',['parent',['../structtvg_1_1Paint.html#acd0cf5162c7ef583f22af168d6591690',1,'tvg::Paint']]],
+  ['path_4',['path',['../structtvg_1_1Shape.html#abd4cf3d1efccde993ae474a7b67eff80',1,'tvg::Shape']]],
+  ['pathcommand_5',['PathCommand',['../group__ThorVG.html#gad208db4bb7f23bc68dd7bfdc5e85465d',1,'tvg']]],
+  ['picture_6',['picture',['../structtvg_1_1Picture.html',1,'Picture'],['../structtvg_1_1Animation.html#a63c8be5578a3ffde39814a64d58b2c3e',1,'tvg::Animation::picture()'],['../group__ThorVG.html#gga5f787df9cdf370248382504196841479a8ae5811be1a55b9b8447ad2dbdadbf6e',1,'Picturetvg']]],
+  ['point_7',['Point',['../structtvg_1_1Point.html',1,'tvg']]],
+  ['push_8',['push',['../structtvg_1_1Canvas.html#adb3af4c864d65efc8b82013c79d915e9',1,'tvg::Canvas::push()'],['../structtvg_1_1Scene.html#adb3af4c864d65efc8b82013c79d915e9',1,'tvg::Scene::push(Paint *target, Paint *at=nullptr) noexcept'],['../structtvg_1_1Scene.html#a8c4d96805c51d1e1876458ad84708925',1,'tvg::Scene::push(SceneEffect effect,...) noexcept']]]
 ];

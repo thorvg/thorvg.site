@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wgcanvas_190',['WgCanvas',['../classtvg_1_1WgCanvas.html',1,'tvg']]]
+  ['wgcanvas_0',['WgCanvas',['../structtvg_1_1WgCanvas.html',1,'tvg']]]
 ];

@@ -1,0 +1,9 @@
+<map id="Canvas" name="Canvas">
+<area shape="rect" id="Node000001" title="An abstract class for drawing graphical elements." alt="" coords="123,5,193,31"/>
+<area shape="rect" id="Node000002" href="$structtvg_1_1GlCanvas.html" title="A class for the rendering graphic elements with a GL raster engine." alt="" coords="5,79,89,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,40,67,81,64,76,127,36"/>
+<area shape="rect" id="Node000003" href="$structtvg_1_1SwCanvas.html" title="A class for the rendering graphical elements with a software raster engine." alt="" coords="113,79,203,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,44,161,79,155,79,155,44"/>
+<area shape="rect" id="Node000004" href="$structtvg_1_1WgCanvas.html" title="A class for the rendering graphic elements with a WebGPU raster engine." alt="" coords="227,79,318,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="189,35,255,76,253,81,186,40"/>
+</map>

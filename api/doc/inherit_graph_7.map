@@ -1,7 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classtvg_1_1Paint.html" title="An abstract class for managing graphical elements." alt="" coords="5,81,60,108"/>
-<area shape="rect" id="node2" href="$classtvg_1_1Picture.html" title="A class representing an image read in one of the supported formats: raw, svg, png,..." alt="" coords="108,5,175,32"/>
-<area shape="rect" id="node3" href="$classtvg_1_1Scene.html" title="A class to composite children paints." alt="" coords="111,56,172,83"/>
-<area shape="rect" id="node4" href="$classtvg_1_1Shape.html" title="A class representing two&#45;dimensional figures and their properties." alt="" coords="110,107,173,133"/>
-<area shape="rect" id="node5" href="$classtvg_1_1Text.html" title="A class to represent text objects in a graphical context, allowing for rendering and manipulation of ..." alt="" coords="117,157,166,184"/>
+<area shape="rect" id="Node000000" href="$structtvg_1_1Paint.html" title="An abstract class for managing graphical elements." alt="" coords="5,80,60,105"/>
+<area shape="rect" id="Node000001" href="$structtvg_1_1Picture.html" title="A class representing an image read in one of the supported formats: raw, svg, png,..." alt="" coords="108,5,175,31"/>
+<area shape="poly" id="edge7_Node000000_Node000001" title=" " alt="" coords="62,69,120,29,123,33,65,74"/>
+<area shape="rect" id="Node000002" href="$structtvg_1_1Scene.html" title="A class to composite children paints." alt="" coords="111,55,172,80"/>
+<area shape="poly" id="edge8_Node000000_Node000002" title=" " alt="" coords="73,81,110,72,111,77,74,86"/>
+<area shape="rect" id="Node000003" href="$structtvg_1_1Shape.html" title="A class representing two&#45;dimensional figures and their properties." alt="" coords="110,104,173,129"/>
+<area shape="poly" id="edge9_Node000000_Node000003" title=" " alt="" coords="74,99,111,107,109,112,73,104"/>
+<area shape="rect" id="Node000004" href="$structtvg_1_1Text.html" title="A class to represent text objects in a graphical context, allowing for rendering and manipulation of ..." alt="" coords="117,153,166,179"/>
+<area shape="poly" id="edge10_Node000000_Node000004" title=" " alt="" coords="65,111,123,151,120,155,62,115"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['radialgradient_184',['RadialGradient',['../classtvg_1_1RadialGradient.html',1,'tvg']]]
+  ['radialgradient_0',['RadialGradient',['../structtvg_1_1RadialGradient.html',1,'tvg']]]
 ];

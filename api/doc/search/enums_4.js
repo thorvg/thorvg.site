@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pathcommand_274',['PathCommand',['../group__ThorVG.html#ga6876ed676934f4dbcc19b1b53c153cc1',1,'tvg']]]
+  ['maskmethod_0',['MaskMethod',['../group__ThorVG.html#gaaf95c5225fd998fd34dc0429d0c31b1d',1,'tvg']]]
 ];

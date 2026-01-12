@@ -1,0 +1,7 @@
+<map id="Fill" name="Fill">
+<area shape="rect" id="Node000001" title="An abstract class representing the gradient fill of the Shape object." alt="" coords="115,5,156,31"/>
+<area shape="rect" id="Node000002" href="$structtvg_1_1LinearGradient.html" title="A class representing the linear gradient fill of the Shape object." alt="" coords="5,79,124,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,43,78,80,74,77,112,39"/>
+<area shape="rect" id="Node000003" href="$structtvg_1_1RadialGradient.html" title="A class representing the radial gradient fill of the Shape object." alt="" coords="148,79,267,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="159,39,198,77,194,80,155,43"/>
+</map>

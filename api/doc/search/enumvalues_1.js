@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['bevel_287',['Bevel',['../group__ThorVG.html#ggaba8b7236c41a171289aef2f3c71eef51a1b9ae4ca6d43fc984af318046e1e7bb5',1,'tvg']]],
-  ['butt_288',['Butt',['../group__ThorVG.html#gga6239974a858100e129f1e0b8ffac4f96ab2635ed1075287dea1eb1598a90df1fe',1,'tvg']]]
+  ['bevel_0',['Bevel',['../group__ThorVG.html#gga1435ecc3a7946e381d964f415180197da1b9ae4ca6d43fc984af318046e1e7bb5',1,'tvg']]],
+  ['butt_1',['Butt',['../group__ThorVG.html#ggac724dd09f5118a9bc13d06c1d263fb8eab2635ed1075287dea1eb1598a90df1fe',1,'tvg']]]
 ];

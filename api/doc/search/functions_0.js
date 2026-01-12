@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['appendarc_191',['appendArc',['../classtvg_1_1Shape.html#a5c2815889f8a3d7d2c980cb225989e43',1,'tvg::Shape']]],
-  ['appendcircle_192',['appendCircle',['../classtvg_1_1Shape.html#a52eccb2815eaa1231da9c389cd92ffa1',1,'tvg::Shape']]],
-  ['appendpath_193',['appendPath',['../classtvg_1_1Shape.html#a3588ea30776a747a22b6ee82dadb9717',1,'tvg::Shape']]],
-  ['appendrect_194',['appendRect',['../classtvg_1_1Shape.html#a8ef2587269a01153c9ea4ca4a8d31b49',1,'tvg::Shape']]]
+  ['align_0',['align',['../structtvg_1_1Text.html#a11ea45cdc60fb15476446747c2bb69c7',1,'tvg::Text']]],
+  ['appendcircle_1',['appendCircle',['../structtvg_1_1Shape.html#a74287d750c9d06cd709147b6d19f8f52',1,'tvg::Shape']]],
+  ['appendpath_2',['appendPath',['../structtvg_1_1Shape.html#a3588ea30776a747a22b6ee82dadb9717',1,'tvg::Shape']]],
+  ['appendrect_3',['appendRect',['../structtvg_1_1Shape.html#a770995f3d1a13246888c59b51a61dd6d',1,'tvg::Shape']]],
+  ['apply_4',['apply',['../classtvg_1_1LottieAnimation.html#ab2a141097daa6208239dd2839f84ed3c',1,'tvg::LottieAnimation']]],
+  ['assign_5',['assign',['../classtvg_1_1LottieAnimation.html#a53cdb2847c70aa149cbcd428aaab2b86',1,'tvg::LottieAnimation']]]
 ];

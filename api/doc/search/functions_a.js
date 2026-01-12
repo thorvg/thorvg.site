@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['paint_225',['paint',['../classtvg_1_1Picture.html#aeaff657c918ea2a3d984478a5e981ea2',1,'tvg::Picture']]],
-  ['paints_226',['paints',['../classtvg_1_1Canvas.html#ace6c268f853a4c144076de89b7bbbe75',1,'tvg::Canvas::paints()'],['../classtvg_1_1Scene.html#ace6c268f853a4c144076de89b7bbbe75',1,'tvg::Scene::paints()']]],
-  ['pathcommands_227',['pathCommands',['../classtvg_1_1Shape.html#ac14d90c2c0130b66a9a33eb7d08101b7',1,'tvg::Shape']]],
-  ['pathcoords_228',['pathCoords',['../classtvg_1_1Shape.html#a818b1b358f0ed7ba448b6d804e087923',1,'tvg::Shape']]],
-  ['picture_229',['picture',['../classtvg_1_1Animation.html#a004ba625c58005c931b244fb2515624f',1,'tvg::Animation']]],
-  ['push_230',['push',['../classtvg_1_1Canvas.html#a82c5ec1c1ba93cf7671642400074201e',1,'tvg::Canvas::push()'],['../classtvg_1_1Scene.html#a19240cd5b53571da718fabef8afb7103',1,'tvg::Scene::push(std::unique_ptr&lt; Paint &gt; paint) noexcept'],['../classtvg_1_1Scene.html#a8c4d96805c51d1e1876458ad84708925',1,'tvg::Scene::push(SceneEffect effect,...) noexcept']]]
+  ['paint_0',['paint',['../structtvg_1_1Picture.html#a346d8ec8b1b89fb96ae2c14950b4f12e',1,'tvg::Picture']]],
+  ['paints_1',['paints',['../structtvg_1_1Canvas.html#aa6a957e00207e32c26d8f8291d1b4fc8',1,'tvg::Canvas::paints()'],['../structtvg_1_1Scene.html#aa6a957e00207e32c26d8f8291d1b4fc8',1,'tvg::Scene::paints()']]],
+  ['parent_2',['parent',['../structtvg_1_1Paint.html#acd0cf5162c7ef583f22af168d6591690',1,'tvg::Paint']]],
+  ['path_3',['path',['../structtvg_1_1Shape.html#abd4cf3d1efccde993ae474a7b67eff80',1,'tvg::Shape']]],
+  ['picture_4',['picture',['../structtvg_1_1Animation.html#a63c8be5578a3ffde39814a64d58b2c3e',1,'tvg::Animation']]],
+  ['push_5',['push',['../structtvg_1_1Canvas.html#adb3af4c864d65efc8b82013c79d915e9',1,'tvg::Canvas::push()'],['../structtvg_1_1Scene.html#adb3af4c864d65efc8b82013c79d915e9',1,'tvg::Scene::push(Paint *target, Paint *at=nullptr) noexcept'],['../structtvg_1_1Scene.html#a8c4d96805c51d1e1876458ad84708925',1,'tvg::Scene::push(SceneEffect effect,...) noexcept']]]
 ];

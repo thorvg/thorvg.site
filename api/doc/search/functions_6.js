@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['id_215',['id',['../classtvg_1_1Accessor.html#a4f77dd34469490a192e5b56656f13a50',1,'tvg::Accessor']]],
-  ['identifier_216',['identifier',['../classtvg_1_1Paint.html#aee92a597f61d9bbdbd223b5dfc3877b7',1,'tvg::Paint::identifier()'],['../classtvg_1_1Fill.html#aee92a597f61d9bbdbd223b5dfc3877b7',1,'tvg::Fill::identifier()'],['../classtvg_1_1LinearGradient.html#ae1adb7ffb2cd728a61829849a31ffaaa',1,'tvg::LinearGradient::identifier()'],['../classtvg_1_1RadialGradient.html#ae1adb7ffb2cd728a61829849a31ffaaa',1,'tvg::RadialGradient::identifier()'],['../classtvg_1_1Shape.html#ae1adb7ffb2cd728a61829849a31ffaaa',1,'tvg::Shape::identifier()'],['../classtvg_1_1Picture.html#ae1adb7ffb2cd728a61829849a31ffaaa',1,'tvg::Picture::identifier()'],['../classtvg_1_1Scene.html#ae1adb7ffb2cd728a61829849a31ffaaa',1,'tvg::Scene::identifier()']]],
-  ['init_217',['init',['../classtvg_1_1Initializer.html#aecd30dc028635b645b0dac5b6facea73',1,'tvg::Initializer']]]
+  ['id_0',['id',['../structtvg_1_1Accessor.html#a4f77dd34469490a192e5b56656f13a50',1,'tvg::Accessor']]],
+  ['init_1',['init',['../structtvg_1_1Initializer.html#ae4d46843be6f05b5ad56cc9e1ce6311d',1,'tvg::Initializer']]],
+  ['intersects_2',['intersects',['../structtvg_1_1Paint.html#a42d0149ee9c64001a5b6bbb538402374',1,'tvg::Paint']]],
+  ['italic_3',['italic',['../structtvg_1_1Text.html#af2421e2f4dc82c6aa38fd25b88b357e8',1,'tvg::Text']]]
 ];

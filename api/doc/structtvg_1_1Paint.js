@@ -1,0 +1,27 @@
+var structtvg_1_1Paint =
+[
+    [ "blend", "structtvg_1_1Paint.html#a1878016c09373a24de7b8d618d7be6ee", null ],
+    [ "bounds", "structtvg_1_1Paint.html#af2d0d179a54cae5bd97e80c66c5d0f5a", null ],
+    [ "bounds", "structtvg_1_1Paint.html#af25239043a00999420e5ac3f0755d6fd", null ],
+    [ "clip", "structtvg_1_1Paint.html#ade16fadf72414799e4db771fc6d17b2e", null ],
+    [ "clip", "structtvg_1_1Paint.html#a88cdc85cf7bc59271f52ef007e11fad2", null ],
+    [ "duplicate", "structtvg_1_1Paint.html#aad61a16c98e2572ec565d84d581e0fd3", null ],
+    [ "intersects", "structtvg_1_1Paint.html#a42d0149ee9c64001a5b6bbb538402374", null ],
+    [ "mask", "structtvg_1_1Paint.html#af31461093a9d02b693fef26706da7a40", null ],
+    [ "mask", "structtvg_1_1Paint.html#a4adbadf65f72bd6b61c1099f4037f2c6", null ],
+    [ "opacity", "structtvg_1_1Paint.html#a2ee7517b8bfad47e0f999ba3450e0e3e", null ],
+    [ "opacity", "structtvg_1_1Paint.html#a2f25b71fed3ae390eb8051c7ea65aebf", null ],
+    [ "parent", "structtvg_1_1Paint.html#acd0cf5162c7ef583f22af168d6591690", null ],
+    [ "ref", "structtvg_1_1Paint.html#a206ae36bad2306caf0a8efc06cb4c027", null ],
+    [ "refCnt", "structtvg_1_1Paint.html#a580cd793f2ce77a8135dd4787adc0e75", null ],
+    [ "rotate", "structtvg_1_1Paint.html#a7841fa0c14643e09735d48042ead68f3", null ],
+    [ "scale", "structtvg_1_1Paint.html#a5c057876185525c5723215f95a3984f2", null ],
+    [ "transform", "structtvg_1_1Paint.html#a340708575589dc0f72a4764f711984fc", null ],
+    [ "transform", "structtvg_1_1Paint.html#ac9f6ba428afe884bcc2861de0a2a96f4", null ],
+    [ "translate", "structtvg_1_1Paint.html#ae896f56bfa51c98a50eee3f2bb62e41e", null ],
+    [ "type", "structtvg_1_1Paint.html#aec24b20e43f4edf0fc046517db603181", null ],
+    [ "unref", "structtvg_1_1Paint.html#ab11f7f71c182c4cb1b8d74a31f6eb07a", null ],
+    [ "visible", "structtvg_1_1Paint.html#ab8e24916cfbcafa71b3733a76494e274", null ],
+    [ "visible", "structtvg_1_1Paint.html#a94b762ff17a4bbff9e2aaf71acd303a6", null ],
+    [ "id", "structtvg_1_1Paint.html#abaabdc509cdaba7df9f56c6c76f3ae19", null ]
+];
