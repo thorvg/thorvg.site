@@ -445,26 +445,14 @@ function navTo(o,root,hash,relpath)
   }
 }
 
-function showSyncOff(n,relpath)
-{
-    n.html('<img src="'+relpath+'sync_off.svg" title="'+SYNCOFFMSG+'"/>');
-}
-
-function showSyncOn(n,relpath)
-{
-    n.html('<img src="'+relpath+'sync_on.svg" title="'+SYNCONMSG+'"/>');
-}
-
 function toggleSyncButton(relpath)
 {
   var navSync = $('#nav-sync');
   if (navSync.hasClass('sync')) {
     navSync.removeClass('sync');
-    showSyncOff(navSync,relpath);
     storeLink(stripPath2(pathName())+hashUrl());
   } else {
     navSync.addClass('sync');
-    showSyncOn(navSync,relpath);
     deleteLink();
   }
 }
@@ -499,17 +487,6 @@ function initNavTree(toroot,relpath)
   o.node.plus_img = document.createElement("span");
   o.node.plus_img.className = 'arrow';
   o.node.plus_img.innerHTML = arrowRight;
-
-  if (localStorageSupported()) {
-    var navSync = $('#nav-sync');
-    if (cachedLink()) {
-      showSyncOff(navSync,relpath);
-      navSync.removeClass('sync');
-    } else {
-      showSyncOn(navSync,relpath);
-    }
-    navSync.click(function(){ toggleSyncButton(relpath); });
-  }
 
   if (loadTriggered) { // load before ready
     navTo(o,toroot,hashUrl(),relpath);

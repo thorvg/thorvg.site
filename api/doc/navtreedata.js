@@ -44,6 +44,3 @@ var NAVTREEINDEX =
 "annotated.html",
 "structtvg_1_1Text.html#ab82934b0e19f300568f0aaab976e56fa"
 ];
-
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';

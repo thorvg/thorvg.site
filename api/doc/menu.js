@@ -77,12 +77,6 @@ function initMenu(relPath,searchEnabled,serverSide,searchPage,search) {
     }
   }
 
-  $('#main-nav').before('<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>'+
-                        '<label class="main-menu-btn" for="main-menu-state">'+
-                        '<span class="main-menu-btn-icon"></span> '+
-                        'Toggle main menu visibility</label>'+
-                        '<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>'+
-                        '</div>');
   $('#main-nav').append(makeTree(menudata,relPath));
   $('#main-nav').children(':first').addClass('sm sm-dox').attr('id','main-menu');
   if (searchBoxHtml) {
