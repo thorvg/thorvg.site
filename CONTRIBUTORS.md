@@ -1,5 +1,5 @@
 ## Project Lead
-- Hermet Park <hermetpark@gmail.com>
+- Hermet Park @hermet
 
 ## Core Contributor
-- YouJin Lee <ol-of@naver.com>
+- YouJin Lee @ol-of
