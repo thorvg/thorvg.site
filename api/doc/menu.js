@@ -77,7 +77,6 @@ function initMenu(relPath,searchEnabled,serverSide,searchPage,search) {
     }
   }
 
-  $('#main-nav').append(makeTree(menudata,relPath));
   $('#main-nav').children(':first').addClass('sm sm-dox').attr('id','main-menu');
   if (searchBoxHtml) {
     $('#main-menu').append('<li id="searchBoxPos2" style="float:right"></li>');

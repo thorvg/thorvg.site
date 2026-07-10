@@ -26,7 +26,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="small_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ThorVG<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">ThorVG<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('structtvg_1_1Accessor.html',''); initR
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="structtvg_1_1Accessor-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Accessor<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group__ThorVG.html">ThorVG</a></div></div></div>
+  <div class="headertitle"><div class="title">Accessor<div class="ingroups"><a class="el" href="group__ThorVG.html">ThorVG</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -108,10 +108,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa97b76107252ad4bf037ccbb86cf72e8" id="r_aa97b76107252ad4bf037ccbb86cf72e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ThorVG.html#ga28287671eaf7406afd604bd055ba4066">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Accessor.html#aa97b76107252ad4bf037ccbb86cf72e8">set</a> (<a class="el" href="structtvg_1_1Paint.html">Paint</a> *paint, std::function&lt; bool(const <a class="el" href="structtvg_1_1Paint.html">Paint</a> *paint, void *data)&gt; func, void *data) noexcept</td></tr>
 <tr class="memdesc:aa97b76107252ad4bf037ccbb86cf72e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the access function for traversing the <a class="el" href="structtvg_1_1Picture.html" title="A class representing an image read in one of the supported formats: raw, svg, png,...">Picture</a> scene tree nodes.  <br /></td></tr>
 <tr class="separator:aa97b76107252ad4bf037ccbb86cf72e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6347288741c711dc2c9c8674b226c551" id="r_a6347288741c711dc2c9c8674b226c551"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Accessor.html#a6347288741c711dc2c9c8674b226c551">name</a> (uint32_t <a class="el" href="structtvg_1_1Accessor.html#a4f77dd34469490a192e5b56656f13a50">id</a>) noexcept</td></tr>
+<tr class="memdesc:a6347288741c711dc2c9c8674b226c551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the original name string from a given unique ID.  <br /></td></tr>
+<tr class="separator:a6347288741c711dc2c9c8674b226c551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4f77dd34469490a192e5b56656f13a50" id="r_a4f77dd34469490a192e5b56656f13a50"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Accessor.html#a4f77dd34469490a192e5b56656f13a50">id</a> (const char *name) noexcept</td></tr>
+<tr class="memitem:a4f77dd34469490a192e5b56656f13a50" id="r_a4f77dd34469490a192e5b56656f13a50"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Accessor.html#a4f77dd34469490a192e5b56656f13a50">id</a> (const char *<a class="el" href="structtvg_1_1Accessor.html#a6347288741c711dc2c9c8674b226c551">name</a>) noexcept</td></tr>
 <tr class="memdesc:a4f77dd34469490a192e5b56656f13a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a unique ID (hash key) from a given name.  <br /></td></tr>
 <tr class="separator:a4f77dd34469490a192e5b56656f13a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af76a1302d91a9177ef5acf9debe92252" id="r_af76a1302d91a9177ef5acf9debe92252"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structtvg_1_1Accessor.html">Accessor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Accessor.html#af76a1302d91a9177ef5acf9debe92252">gen</a> () noexcept</td></tr>
@@ -121,7 +124,9 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="structtvg_1_1Accessor.html" title="The Accessor is a utility class to debug the Scene structure by traversing the scene-tree.">Accessor</a> is a utility class to debug the <a class="el" href="structtvg_1_1Scene.html" title="A class to composite children paints.">Scene</a> structure by traversing the scene-tree. </p>
 <p>The <a class="el" href="structtvg_1_1Accessor.html" title="The Accessor is a utility class to debug the Scene structure by traversing the scene-tree.">Accessor</a> helps you search specific nodes to read the property information, figure out the structure of the scene tree and its size.</p>
-<dl class="section warning"><dt>Warning</dt><dd>We strongly warn you not to change the paints of a scene unless you really know the design-structure.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>We strongly warn you not to change the paints of a scene unless you really know the design-structure. </dd>
+<dd>
+This class is not designed for inheritance.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>0.10 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af76a1302d91a9177ef5acf9debe92252" name="af76a1302d91a9177ef5acf9debe92252"></a>
@@ -185,8 +190,54 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The generated unique identifier value.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structtvg_1_1Paint.html#abaabdc509cdaba7df9f56c6c76f3ae19" title="Unique ID of this instance.">Paint::id</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structtvg_1_1Paint.html#abaabdc509cdaba7df9f56c6c76f3ae19" title="Unique ID of this instance.">Paint::id</a> </dd>
+<dd>
+<a class="el" href="structtvg_1_1Picture.html#a346d8ec8b1b89fb96ae2c14950b4f12e" title="Retrieve a Paint object from the Picture scene by its unique ID.">Picture::paint()</a></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6347288741c711dc2c9c8674b226c551" name="a6347288741c711dc2c9c8674b226c551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6347288741c711dc2c9c8674b226c551">&#9670;&#160;</a></span>name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * name </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve the original name string from a given unique ID. </p>
+<p>Returns the name associated with the specified identifier.</p>
+<p>This method is only valid when Picture::accessible is set to <code>true</code> for the <a class="el" href="structtvg_1_1Picture.html" title="A class representing an image read in one of the supported formats: raw, svg, png,...">Picture</a> associated with the given <code>paint</code> in <a class="el" href="structtvg_1_1Accessor.html#aa97b76107252ad4bf037ccbb86cf72e8">Accessor::set()</a> Otherwise, the name information may not be available.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>The unique identifier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The corresponding name string, or <code>nullptr</code> if not found or unavailable.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structtvg_1_1Accessor.html#a4f77dd34469490a192e5b56656f13a50" title="Generate a unique ID (hash key) from a given name.">Accessor::id()</a> </dd>
+<dd>
+<a class="el" href="structtvg_1_1Accessor.html#aa97b76107252ad4bf037ccbb86cf72e8" title="Set the access function for traversing the Picture scene tree nodes.">Accessor::set()</a> </dd>
+<dd>
+Picture::accessible</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is only available within <a class="el" href="structtvg_1_1Accessor.html" title="The Accessor is a utility class to debug the Scene structure by traversing the scene-tree.">Accessor</a> callbacks registered via <a class="el" href="structtvg_1_1Accessor.html#aa97b76107252ad4bf037ccbb86cf72e8">Accessor::set()</a>. </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.1 </dd></dl>
 
 </div>
 </div>

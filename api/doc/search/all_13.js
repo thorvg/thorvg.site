@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['version_0',['version',['../structtvg_1_1Initializer.html#a42831e835cd66496013e1fd5c690c5a0',1,'tvg::Initializer']]],
-  ['viewport_1',['viewport',['../structtvg_1_1Canvas.html#acc371aa42e8f20b1569c7e4dfd47744b',1,'tvg::Canvas']]],
-  ['visible_2',['visible',['../structtvg_1_1Paint.html#a94b762ff17a4bbff9e2aaf71acd303a6',1,'tvg::Paint::visible(bool on) noexcept'],['../structtvg_1_1Paint.html#ab8e24916cfbcafa71b3733a76494e274',1,'tvg::Paint::visible() const noexcept']]]
+  ['wgcanvas_0',['WgCanvas',['../structtvg_1_1WgCanvas.html',1,'tvg']]],
+  ['word_1',['Word',['../group__ThorVG.html#gga0054d22afce4b608176d82816cb485daa07a094a210794e74a0e5e1a1457a92ee',1,'tvg']]],
+  ['wrap_2',['wrap',['../structtvg_1_1Text.html#a61840d52d4c7c012e22c0f8190158572',1,'tvg::Text']]]
 ];

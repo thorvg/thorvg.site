@@ -26,7 +26,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="small_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ThorVG<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">ThorVG<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -149,8 +149,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a34114d6bee416ef24d68ba1287498964" id="r_a34114d6bee416ef24d68ba1287498964"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ThorVG.html#ga28287671eaf7406afd604bd055ba4066">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Picture.html#a34114d6bee416ef24d68ba1287498964">resolver</a> (std::function&lt; bool(<a class="el" href="structtvg_1_1Paint.html">Paint</a> *<a class="el" href="structtvg_1_1Picture.html#a346d8ec8b1b89fb96ae2c14950b4f12e">paint</a>, const char *src, void *data)&gt; func, void *data) noexcept</td></tr>
 <tr class="memdesc:a34114d6bee416ef24d68ba1287498964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the asset resolver callback for handling external resources (e.g., images and fonts).  <br /></td></tr>
 <tr class="separator:a34114d6bee416ef24d68ba1287498964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22a611b6f925e3e4654e730a9b3f1714" id="r_a22a611b6f925e3e4654e730a9b3f1714"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ThorVG.html#ga28287671eaf7406afd604bd055ba4066">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Picture.html#a22a611b6f925e3e4654e730a9b3f1714">filter</a> (<a class="el" href="group__ThorVG.html#gaef4a22866fba70c21b3a063fa21369be">FilterMethod</a> method) noexcept</td></tr>
+<tr class="memdesc:a22a611b6f925e3e4654e730a9b3f1714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the image filtering method for rendering this picture.  <br /></td></tr>
+<tr class="separator:a22a611b6f925e3e4654e730a9b3f1714"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a346d8ec8b1b89fb96ae2c14950b4f12e" id="r_a346d8ec8b1b89fb96ae2c14950b4f12e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structtvg_1_1Paint.html">Paint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Picture.html#a346d8ec8b1b89fb96ae2c14950b4f12e">paint</a> (uint32_t <a class="el" href="structtvg_1_1Paint.html#abaabdc509cdaba7df9f56c6c76f3ae19">id</a>) noexcept</td></tr>
-<tr class="memdesc:a346d8ec8b1b89fb96ae2c14950b4f12e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a paint object from the <a class="el" href="structtvg_1_1Picture.html" title="A class representing an image read in one of the supported formats: raw, svg, png,...">Picture</a> scene by its Unique ID.  <br /></td></tr>
+<tr class="memdesc:a346d8ec8b1b89fb96ae2c14950b4f12e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a <a class="el" href="structtvg_1_1Paint.html" title="An abstract class for managing graphical elements.">Paint</a> object from the <a class="el" href="structtvg_1_1Picture.html" title="A class representing an image read in one of the supported formats: raw, svg, png,...">Picture</a> scene by its unique ID.  <br /></td></tr>
 <tr class="separator:a346d8ec8b1b89fb96ae2c14950b4f12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0998d9f221df277cafde4934e3828aa2" id="r_a0998d9f221df277cafde4934e3828aa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ThorVG.html#ga5f787df9cdf370248382504196841479">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Picture.html#a0998d9f221df277cafde4934e3828aa2">type</a> () const noexcept override</td></tr>
 <tr class="memdesc:a0998d9f221df277cafde4934e3828aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ID value of this class.  <br /></td></tr>
@@ -195,9 +198,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af2d0d179a54cae5bd97e80c66c5d0f5a inherit pub_methods_structtvg_1_1Paint" id="r_af2d0d179a54cae5bd97e80c66c5d0f5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ThorVG.html#ga28287671eaf7406afd604bd055ba4066">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Paint.html#af2d0d179a54cae5bd97e80c66c5d0f5a">bounds</a> (float *x, float *y, float *w, float *h) noexcept</td></tr>
 <tr class="memdesc:af2d0d179a54cae5bd97e80c66c5d0f5a inherit pub_methods_structtvg_1_1Paint"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the axis-aligned bounding box (AABB) of the paint object in canvas space.  <br /></td></tr>
 <tr class="separator:af2d0d179a54cae5bd97e80c66c5d0f5a inherit pub_methods_structtvg_1_1Paint"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42d0149ee9c64001a5b6bbb538402374 inherit pub_methods_structtvg_1_1Paint" id="r_a42d0149ee9c64001a5b6bbb538402374"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Paint.html#a42d0149ee9c64001a5b6bbb538402374">intersects</a> (int32_t x, int32_t y, int32_t w=1, int32_t h=1) noexcept</td></tr>
-<tr class="memdesc:a42d0149ee9c64001a5b6bbb538402374 inherit pub_methods_structtvg_1_1Paint"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a given region intersects the filled area of the paint.  <br /></td></tr>
-<tr class="separator:a42d0149ee9c64001a5b6bbb538402374 inherit pub_methods_structtvg_1_1Paint"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2718a5494b52d0507e9836ce161cbc79 inherit pub_methods_structtvg_1_1Paint" id="r_a2718a5494b52d0507e9836ce161cbc79"><td class="memItemLeft" align="right" valign="top">TVG_DEPRECATED bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Paint.html#a2718a5494b52d0507e9836ce161cbc79">intersects</a> (int32_t x, int32_t y, int32_t w=1, int32_t h=1) noexcept</td></tr>
+<tr class="separator:a2718a5494b52d0507e9836ce161cbc79 inherit pub_methods_structtvg_1_1Paint"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c1efaa03489cff01c7488ab08609e7d inherit pub_methods_structtvg_1_1Paint" id="r_a1c1efaa03489cff01c7488ab08609e7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Paint.html#a1c1efaa03489cff01c7488ab08609e7d">intersects</a> (int32_t x, int32_t y, int32_t w, int32_t h, bool visibleOnly) noexcept</td></tr>
+<tr class="memdesc:a1c1efaa03489cff01c7488ab08609e7d inherit pub_methods_structtvg_1_1Paint"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a given region intersects the filled area of the paint.  <br /></td></tr>
+<tr class="separator:a1c1efaa03489cff01c7488ab08609e7d inherit pub_methods_structtvg_1_1Paint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad61a16c98e2572ec565d84d581e0fd3 inherit pub_methods_structtvg_1_1Paint" id="r_aad61a16c98e2572ec565d84d581e0fd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtvg_1_1Paint.html">Paint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Paint.html#aad61a16c98e2572ec565d84d581e0fd3">duplicate</a> () const noexcept</td></tr>
 <tr class="memdesc:aad61a16c98e2572ec565d84d581e0fd3 inherit pub_methods_structtvg_1_1Paint"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicates the object.  <br /></td></tr>
 <tr class="separator:aad61a16c98e2572ec565d84d581e0fd3 inherit pub_methods_structtvg_1_1Paint"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,6 +252,44 @@ Additional Inherited Members</h2></td></tr>
 See <a class="el" href="structtvg_1_1Animation.html" title="The Animation class enables manipulation of animatable images.">Animation</a> class if the picture data is animatable.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This class is not designed for inheritance. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a22a611b6f925e3e4654e730a9b3f1714" name="a22a611b6f925e3e4654e730a9b3f1714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22a611b6f925e3e4654e730a9b3f1714">&#9670;&#160;</a></span>filter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ThorVG.html#ga28287671eaf7406afd604bd055ba4066">Result</a> filter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ThorVG.html#gaef4a22866fba70c21b3a063fa21369be">FilterMethod</a>&#160;</td>
+          <td class="paramname"><em>method</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the image filtering method for rendering this picture. </p>
+<p>Specifies how the image data should be filtered when it is scaled or transformed during rendering. This affects the visual quality and performance of the output.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">method</td><td>The filtering method to apply. Default is <code><a class="el" href="group__ThorVG.html#ggaef4a22866fba70c21b3a063fa21369beaaf17c98bbd83c27d6426d2ff3fa81d7f" title="Smooth interpolation using surrounding pixels for higher quality.">FilterMethod::Bilinear</a></code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Always returns <code><a class="el" href="group__ThorVG.html#gga28287671eaf7406afd604bd055ba4066a505a83f220c02df2f85c3810cd9ceb38" title="The value returned in case of a correct request execution.">Result::Success</a></code>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ThorVG.html#gaef4a22866fba70c21b3a063fa21369be" title="Defines the image filtering method used during image scaling or transformation.">FilterMethod</a> </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.1 </dd></dl>
+
+</div>
+</div>
 <a id="a0cdc13f34ffe16f981ecc7c5610c4fdc" name="a0cdc13f34ffe16f981ecc7c5610c4fdc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0cdc13f34ffe16f981ecc7c5610c4fdc">&#9670;&#160;</a></span>gen()</h2>
 
@@ -344,7 +387,8 @@ See <a class="el" href="structtvg_1_1Animation.html" title="The Animation class 
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname"><a class="el" href="group__ThorVG.html#gga28287671eaf7406afd604bd055ba4066ae73a2e92f1c87086c838b442552a4775" title="The value returned in the event of a problem with the arguments given to the API - e....">Result::InvalidArguments</a></td><td>In case no data are provided or the <code>size</code> is zero or less. </td></tr>
-    <tr><td class="paramname"><a class="el" href="group__ThorVG.html#gga28287671eaf7406afd604bd055ba4066aa0cfd518e4385f31d38720579321ed29" title="The value returned in case of choosing unsupported engine features(options).">Result::NonSupport</a></td><td>When trying to load a file with an unknown extension.</td></tr>
+    <tr><td class="paramname"><a class="el" href="group__ThorVG.html#gga28287671eaf7406afd604bd055ba4066aa0cfd518e4385f31d38720579321ed29" title="The value returned in case of choosing unsupported engine features(options).">Result::NonSupport</a></td><td>When trying to load a file with an unknown extension. </td></tr>
+    <tr><td class="paramname"><a class="el" href="group__ThorVG.html#gga28287671eaf7406afd604bd055ba4066a119732ff568bf103d744e930ae2404f1" title="The value returned in case the request cannot be processed - e.g. asking for properties of an object,...">Result::InsufficientCondition</a></td><td>If a vector asset has already been loaded into the picture.</td></tr>
   </table>
   </dd>
 </dl>
@@ -462,6 +506,7 @@ See <a class="el" href="structtvg_1_1Animation.html" title="The Animation class 
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>If the memory data pointed to by <code>data</code> is modified, calling this API will re-upload the updated content to the canvas.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>0.9 </dd></dl>
 
 </div>
@@ -597,16 +642,19 @@ See <a class="el" href="structtvg_1_1Animation.html" title="The Animation class 
 </table>
 </div><div class="memdoc">
 
-<p>Retrieve a paint object from the <a class="el" href="structtvg_1_1Picture.html" title="A class representing an image read in one of the supported formats: raw, svg, png,...">Picture</a> scene by its Unique ID. </p>
-<p>This function searches for a paint object within the <a class="el" href="structtvg_1_1Picture.html" title="A class representing an image read in one of the supported formats: raw, svg, png,...">Picture</a> scene that matches the provided <code>id</code>.</p>
+<p>Retrieve a <a class="el" href="structtvg_1_1Paint.html" title="An abstract class for managing graphical elements.">Paint</a> object from the <a class="el" href="structtvg_1_1Picture.html" title="A class representing an image read in one of the supported formats: raw, svg, png,...">Picture</a> scene by its unique ID. </p>
+<p>Searches for a <a class="el" href="structtvg_1_1Paint.html" title="An abstract class for managing graphical elements.">Paint</a> object within the <a class="el" href="structtvg_1_1Picture.html" title="A class representing an image read in one of the supported formats: raw, svg, png,...">Picture</a> scene that matches the given <code>id</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>The Unique ID of the paint object.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>The unique identifier of the <a class="el" href="structtvg_1_1Paint.html" title="An abstract class for managing graphical elements.">Paint</a> object.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the paint object that matches the given identifier, or <code>nullptr</code> if no matching paint object is found.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structtvg_1_1Accessor.html#a4f77dd34469490a192e5b56656f13a50" title="Generate a unique ID (hash key) from a given name.">Accessor::id()</a></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the matching <a class="el" href="structtvg_1_1Paint.html" title="An abstract class for managing graphical elements.">Paint</a> object, or <code>nullptr</code> if not found.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Setting Picture::accessible to <code>true</code> enables more efficient access.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structtvg_1_1Accessor.html#a4f77dd34469490a192e5b56656f13a50" title="Generate a unique ID (hash key) from a given name.">Accessor::id()</a> </dd>
+<dd>
+Picture::accessible</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
 
 </div>
@@ -660,11 +708,12 @@ See <a class="el" href="structtvg_1_1Animation.html" title="The Animation class 
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>This function must be called before <a class="el" href="structtvg_1_1Picture.html#ad5b45cb881530b720c88befd89a92b81">Picture::load()</a> Setting the resolver after loading will have no effect on asset resolution for that asset. </dd>
+<dl class="section warning"><dt>Warning</dt><dd>This function must be called before <a class="el" href="structtvg_1_1Picture.html#ad5b45cb881530b720c88befd89a92b81">Picture::load()</a> Setting the resolver after loading will have no effect on asset resolution for that asset. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd><code>src</code> will be either a font path or a font name. In the case of a font name, <code>src</code> will begin with "name:", e.g., "name:FreeSans-Medium". </dd>
 <dd>
 If <code>false</code> is returned by <code>func</code>, ThorVG will attempt to resolve the resource using its internal resolution mechanism as a fallback. </dd>
 <dd>
-To unset the resolver, pass <code>nullptr</code> as the <code>func</code> parameter. </dd>
+To unset the resolver, pass <code>nullptr</code> as the <code>func</code> parameter.</dd>
 <dd>
 Experimental API </dd></dl>
 

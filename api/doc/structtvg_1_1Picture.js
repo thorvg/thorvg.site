@@ -1,5 +1,6 @@
 var structtvg_1_1Picture =
 [
+    [ "filter", "structtvg_1_1Picture.html#a22a611b6f925e3e4654e730a9b3f1714", null ],
     [ "load", "structtvg_1_1Picture.html#ae9466fc48f7c912cda6d75835f5c09ab", null ],
     [ "load", "structtvg_1_1Picture.html#ad5b45cb881530b720c88befd89a92b81", null ],
     [ "load", "structtvg_1_1Picture.html#a3a9fa2e2437f252c93d4e09115f28260", null ],

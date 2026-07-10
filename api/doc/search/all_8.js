@@ -5,7 +5,7 @@ var searchData=
   ['initializer_2',['Initializer',['../structtvg_1_1Initializer.html',1,'tvg']]],
   ['insufficientcondition_3',['InsufficientCondition',['../group__ThorVG.html#gga28287671eaf7406afd604bd055ba4066a119732ff568bf103d744e930ae2404f1',1,'tvg']]],
   ['intersect_4',['Intersect',['../group__ThorVG.html#ggaaf95c5225fd998fd34dc0429d0c31b1da6faa907d79c8bb46a12bea5c8de76654',1,'tvg']]],
-  ['intersects_5',['intersects',['../structtvg_1_1Paint.html#a42d0149ee9c64001a5b6bbb538402374',1,'tvg::Paint']]],
+  ['intersects_5',['intersects',['../structtvg_1_1Paint.html#a2718a5494b52d0507e9836ce161cbc79',1,'tvg::Paint::intersects(int32_t x, int32_t y, int32_t w=1, int32_t h=1) noexcept'],['../structtvg_1_1Paint.html#a1c1efaa03489cff01c7488ab08609e7d',1,'tvg::Paint::intersects(int32_t x, int32_t y, int32_t w, int32_t h, bool visibleOnly) noexcept']]],
   ['invalidarguments_6',['InvalidArguments',['../group__ThorVG.html#gga28287671eaf7406afd604bd055ba4066ae73a2e92f1c87086c838b442552a4775',1,'tvg']]],
   ['invalpha_7',['InvAlpha',['../group__ThorVG.html#ggaaf95c5225fd998fd34dc0429d0c31b1da25d7c50f7acd16fbee6579c30e08c671',1,'tvg']]],
   ['invluma_8',['InvLuma',['../group__ThorVG.html#ggaaf95c5225fd998fd34dc0429d0c31b1da59eb29415f9a1cf3765be0cc23dc5f40',1,'tvg']]],

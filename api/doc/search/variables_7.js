@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_0',['y',['../structtvg_1_1Point.html#aa4f0d3eebc3c443f9be81bf48561a217',1,'tvg::Point']]]
+  ['offset_0',['offset',['../structtvg_1_1Fill_1_1ColorStop.html#a3e60b3c561be982d7c8e23f14c01fd5b',1,'tvg::Fill::ColorStop']]]
 ];

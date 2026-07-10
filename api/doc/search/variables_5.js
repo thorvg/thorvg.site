@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['r_0',['r',['../structtvg_1_1Fill_1_1ColorStop.html#a4c5c6ceb8ed33456261fa907136e0c3a',1,'tvg::Fill::ColorStop']]]
+  ['linegap_0',['linegap',['../structtvg_1_1TextMetrics.html#af5dce933ea3f84ac856b48d0f05f3fc6',1,'tvg::TextMetrics']]]
 ];
