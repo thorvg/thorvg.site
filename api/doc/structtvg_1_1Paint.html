@@ -26,7 +26,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="small_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ThorVG<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">ThorVG<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -161,9 +161,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af2d0d179a54cae5bd97e80c66c5d0f5a" id="r_af2d0d179a54cae5bd97e80c66c5d0f5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ThorVG.html#ga28287671eaf7406afd604bd055ba4066">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Paint.html#af2d0d179a54cae5bd97e80c66c5d0f5a">bounds</a> (float *x, float *y, float *w, float *h) noexcept</td></tr>
 <tr class="memdesc:af2d0d179a54cae5bd97e80c66c5d0f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the axis-aligned bounding box (AABB) of the paint object in canvas space.  <br /></td></tr>
 <tr class="separator:af2d0d179a54cae5bd97e80c66c5d0f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42d0149ee9c64001a5b6bbb538402374" id="r_a42d0149ee9c64001a5b6bbb538402374"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Paint.html#a42d0149ee9c64001a5b6bbb538402374">intersects</a> (int32_t x, int32_t y, int32_t w=1, int32_t h=1) noexcept</td></tr>
-<tr class="memdesc:a42d0149ee9c64001a5b6bbb538402374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a given region intersects the filled area of the paint.  <br /></td></tr>
-<tr class="separator:a42d0149ee9c64001a5b6bbb538402374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2718a5494b52d0507e9836ce161cbc79" id="r_a2718a5494b52d0507e9836ce161cbc79"><td class="memItemLeft" align="right" valign="top">TVG_DEPRECATED bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Paint.html#a2718a5494b52d0507e9836ce161cbc79">intersects</a> (int32_t x, int32_t y, int32_t w=1, int32_t h=1) noexcept</td></tr>
+<tr class="separator:a2718a5494b52d0507e9836ce161cbc79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c1efaa03489cff01c7488ab08609e7d" id="r_a1c1efaa03489cff01c7488ab08609e7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Paint.html#a1c1efaa03489cff01c7488ab08609e7d">intersects</a> (int32_t x, int32_t y, int32_t w, int32_t h, bool visibleOnly) noexcept</td></tr>
+<tr class="memdesc:a1c1efaa03489cff01c7488ab08609e7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a given region intersects the filled area of the paint.  <br /></td></tr>
+<tr class="separator:a1c1efaa03489cff01c7488ab08609e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad61a16c98e2572ec565d84d581e0fd3" id="r_aad61a16c98e2572ec565d84d581e0fd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtvg_1_1Paint.html">Paint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Paint.html#aad61a16c98e2572ec565d84d581e0fd3">duplicate</a> () const noexcept</td></tr>
 <tr class="memdesc:aad61a16c98e2572ec565d84d581e0fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicates the object.  <br /></td></tr>
 <tr class="separator:aad61a16c98e2572ec565d84d581e0fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -463,8 +465,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a42d0149ee9c64001a5b6bbb538402374" name="a42d0149ee9c64001a5b6bbb538402374"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42d0149ee9c64001a5b6bbb538402374">&#9670;&#160;</a></span>intersects()</h2>
+<a id="a1c1efaa03489cff01c7488ab08609e7d" name="a1c1efaa03489cff01c7488ab08609e7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c1efaa03489cff01c7488ab08609e7d">&#9670;&#160;</a></span>intersects() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -474,6 +476,81 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool intersects </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>visibleOnly</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks whether a given region intersects the filled area of the paint. </p>
+<p>This function determines whether the specified rectangular region—defined by (<code>x</code>, <code>y</code>, <code>w</code>, <code>h</code>)— intersects the geometric fill region of the paint object.</p>
+<p>This is useful for hit-testing purposes, such as detecting whether a user interaction (e.g., touch or click) occurs within a painted region.</p>
+<p>The paint must be updated in a <a class="el" href="structtvg_1_1Canvas.html" title="An abstract class for drawing graphical elements.">Canvas</a> beforehand—typically after the <a class="el" href="structtvg_1_1Canvas.html" title="An abstract class for drawing graphical elements.">Canvas</a> has been drawn and synchronized.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The x-coordinate of the top-left corner of the test region. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The y-coordinate of the top-left corner of the test region. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>The width of the region to test. Must be greater than 0. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>The height of the region to test. Must be greater than 0. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">visibleOnly</td><td>If <code>true</code>, hidden paints are excluded from the intersection test.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if any part of the region intersects the filled area; otherwise, <code>false</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>To test a single point, set the region size to w = 1, h = 1. </dd>
+<dd>
+This test does not take into account the results of blending or masking.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structtvg_1_1Paint.html#a94b762ff17a4bbff9e2aaf71acd303a6" title="Sets the visibility of the Paint object.">Paint::visible(bool on)</a></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>1.1 </dd></dl>
+
+</div>
+</div>
+<a id="a2718a5494b52d0507e9836ce161cbc79" name="a2718a5494b52d0507e9836ce161cbc79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2718a5494b52d0507e9836ce161cbc79">&#9670;&#160;</a></span>intersects() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TVG_DEPRECATED bool intersects </td>
           <td>(</td>
           <td class="paramtype">int32_t&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -508,30 +585,6 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Checks whether a given region intersects the filled area of the paint. </p>
-<p>This function determines whether the specified rectangular region—defined by (<code>x</code>, <code>y</code>, <code>w</code>, <code>h</code>)— intersects the geometric fill region of the paint object.</p>
-<p>This is useful for hit-testing purposes, such as detecting whether a user interaction (e.g., touch or click) occurs within a painted region.</p>
-<p>The paint must be updated in a <a class="el" href="structtvg_1_1Canvas.html" title="An abstract class for drawing graphical elements.">Canvas</a> beforehand—typically after the <a class="el" href="structtvg_1_1Canvas.html" title="An abstract class for drawing graphical elements.">Canvas</a> has been drawn and synchronized.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The x-coordinate of the top-left corner of the test region. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The y-coordinate of the top-left corner of the test region. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>The width of the region to test. Must be greater than 0; defaults to 1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>The height of the region to test. Must be greater than 0; defaults to 1.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if any part of the region intersects the filled area; otherwise, <code>false</code>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>To test a single point, set the region size to w = 1, h = 1. </dd>
-<dd>
-For efficiency, an AABB (axis-aligned bounding box) test is performed internally before precise hit detection. </dd>
-<dd>
-This test does not take into account the results of blending or masking. </dd>
-<dd>
-This test does take into account the the hidden paints as well. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structtvg_1_1Paint.html#a94b762ff17a4bbff9e2aaf71acd303a6" title="Sets the visibility of the Paint object.">Paint::visible()</a> </dd></dl>
-<dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
 
 </div>
 </div>
@@ -712,9 +765,9 @@ This test does take into account the the hidden paints as well. </dd></dl>
 <p>Retrieves the parent paint object. </p>
 <p>This function returns a pointer to the parent object if the current paint belongs to one. Otherwise, it returns <code>nullptr</code>.</p>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the parent object if available, otherwise <code>nullptr</code>.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structtvg_1_1Scene.html#adb3af4c864d65efc8b82013c79d915e9" title="Inserts a paint object to the scene.">Scene::push()</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structtvg_1_1Scene.html#a42be6d1de138a7690f70de3ad0536585" title="Adds a paint object to the scene.">Scene::add()</a> </dd>
 <dd>
-<a class="el" href="structtvg_1_1Canvas.html#adb3af4c864d65efc8b82013c79d915e9" title="Adds a paint object to the root scene.">Canvas::push()</a></dd></dl>
+<a class="el" href="structtvg_1_1Canvas.html#a42be6d1de138a7690f70de3ad0536585" title="Adds a paint object to the canvas root scene.">Canvas::add()</a></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
 
 </div>

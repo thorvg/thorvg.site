@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['g_0',['g',['../structtvg_1_1Fill_1_1ColorStop.html#a1673907d4d89d763bb7b94ec1eeb7b60',1,'tvg::Fill::ColorStop']]]
+  ['descent_0',['descent',['../structtvg_1_1TextMetrics.html#a5984964357202018e67f64fd879af95b',1,'tvg::TextMetrics']]]
 ];

@@ -6,9 +6,9 @@ var annotated_dup =
       [ "Canvas", "structtvg_1_1Canvas.html", "structtvg_1_1Canvas" ],
       [ "Fill", "structtvg_1_1Fill.html", "structtvg_1_1Fill" ],
       [ "GlCanvas", "structtvg_1_1GlCanvas.html", "structtvg_1_1GlCanvas" ],
+      [ "GlyphMetrics", "structtvg_1_1GlyphMetrics.html", "structtvg_1_1GlyphMetrics" ],
       [ "Initializer", "structtvg_1_1Initializer.html", null ],
       [ "LinearGradient", "structtvg_1_1LinearGradient.html", "structtvg_1_1LinearGradient" ],
-      [ "LottieAnimation", "classtvg_1_1LottieAnimation.html", "classtvg_1_1LottieAnimation" ],
       [ "Matrix", "structtvg_1_1Matrix.html", null ],
       [ "Paint", "structtvg_1_1Paint.html", "structtvg_1_1Paint" ],
       [ "Picture", "structtvg_1_1Picture.html", "structtvg_1_1Picture" ],
@@ -19,6 +19,7 @@ var annotated_dup =
       [ "Shape", "structtvg_1_1Shape.html", "structtvg_1_1Shape" ],
       [ "SwCanvas", "structtvg_1_1SwCanvas.html", "structtvg_1_1SwCanvas" ],
       [ "Text", "structtvg_1_1Text.html", "structtvg_1_1Text" ],
+      [ "TextMetrics", "structtvg_1_1TextMetrics.html", "structtvg_1_1TextMetrics" ],
       [ "WgCanvas", "structtvg_1_1WgCanvas.html", "structtvg_1_1WgCanvas" ]
     ] ]
 ];

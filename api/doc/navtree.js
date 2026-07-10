@@ -445,14 +445,26 @@ function navTo(o,root,hash,relpath)
   }
 }
 
+function showSyncOff(n,relpath)
+{
+    n.html('<img src="'+relpath+'sync_off.svg" title="'+SYNCOFFMSG+'"/>');
+}
+
+function showSyncOn(n,relpath)
+{
+    n.html('<img src="'+relpath+'sync_on.svg" title="'+SYNCONMSG+'"/>');
+}
+
 function toggleSyncButton(relpath)
 {
   var navSync = $('#nav-sync');
   if (navSync.hasClass('sync')) {
     navSync.removeClass('sync');
+    showSyncOff(navSync,relpath);
     storeLink(stripPath2(pathName())+hashUrl());
   } else {
     navSync.addClass('sync');
+    showSyncOn(navSync,relpath);
     deleteLink();
   }
 }

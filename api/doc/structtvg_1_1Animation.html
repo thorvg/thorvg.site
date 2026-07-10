@@ -26,7 +26,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="small_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ThorVG<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">ThorVG<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -102,16 +102,6 @@ $(document).ready(function(){initNavTree('structtvg_1_1Animation.html',''); init
  <a href="structtvg_1_1Animation.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="thorvg_8h_source.html">thorvg.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for Animation:</div>
-<div class="dyncontent">
-<div class="center"><img src="structtvg_1_1Animation__inherit__graph.png" border="0" usemap="#aAnimation_inherit__map" alt="Inheritance graph"/></div>
-<map name="aAnimation_inherit__map" id="aAnimation_inherit__map">
-<area shape="rect" title="The Animation class enables manipulation of animatable images." alt="" coords="24,5,113,31"/>
-<area shape="rect" href="classtvg_1_1LottieAnimation.html" title="The LottieAnimation class enables control of advanced Lottie features." alt="" coords="5,79,132,104"/>
-<area shape="poly" title=" " alt="" coords="71,44,71,79,66,79,66,44"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -304,7 +294,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Retrieves a picture instance associated with this animation instance. </p>
-<p>This function provides access to the picture instance that can be used to load animation formats, such as lot. After setting up the picture, it can be pushed to the designated canvas, enabling control over animation frames with this <a class="el" href="structtvg_1_1Animation.html" title="The Animation class enables manipulation of animatable images.">Animation</a> instance.</p>
+<p>This function provides access to the picture instance that can be used to load animation formats, such as lot. After setting up the picture, it can be added to the designated canvas, enabling control over animation frames with this <a class="el" href="structtvg_1_1Animation.html" title="The Animation class enables manipulation of animatable images.">Animation</a> instance.</p>
 <dl class="section return"><dt>Returns</dt><dd>A picture instance that is tied to this animation.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>The picture instance is owned by <a class="el" href="structtvg_1_1Animation.html" title="The Animation class enables manipulation of animatable images.">Animation</a>. It should not be deleted manually. </dd></dl>
 
@@ -414,10 +404,10 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd><a class="el" href="structtvg_1_1Animation.html" title="The Animation class enables manipulation of animatable images.">Animation</a> allows a range from 0.0 to the total frame. <code>end</code> should not be higher than <code>begin</code>. </dd>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="structtvg_1_1Animation.html" title="The Animation class enables manipulation of animatable images.">Animation</a> allows a range from 0.0 to the total frame. <code>end</code> should not be lower than <code>begin</code>. </dd>
 <dd>
 If a marker has been specified, its range will be disregarded.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classtvg_1_1LottieAnimation.html#a874d90f3c3b56d0d2bddb6f20370cb48" title="Specifies a segment by marker.">LottieAnimation::segment(const char* marker)</a> </dd>
+<dl class="section see"><dt>See also</dt><dd>LottieAnimation::segment(const char* marker) </dd>
 <dd>
 <a class="el" href="structtvg_1_1Animation.html#a624e4fdeebf70f286188685e769125f3" title="Retrieves the total number of frames in the animation.">Animation::totalFrame()</a></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>

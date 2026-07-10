@@ -26,7 +26,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="small_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ThorVG<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">ThorVG<span id="projectnumber">&#160;v1.1</span>
    </div>
   </td>
  </tr>
@@ -108,6 +108,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Matrix.html">Matrix</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A data structure representing a three-dimensional matrix.  <a href="structtvg_1_1Matrix.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1TextMetrics.html">TextMetrics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes the font metrics of a text object.  <a href="structtvg_1_1TextMetrics.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1GlyphMetrics.html">GlyphMetrics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes the layout metrics of a glyph.  <a href="structtvg_1_1GlyphMetrics.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtvg_1_1Paint.html">Paint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An abstract class for managing graphical elements.  <a href="structtvg_1_1Paint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,6 +193,7 @@ Enumerations</h2></td></tr>
 <tr class="memitem:ga02be441d9536f40ebdd8550f92af7dc6" id="r_ga02be441d9536f40ebdd8550f92af7dc6"><td class="memItemLeft" align="right" valign="top">enum struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ThorVG.html#ga02be441d9536f40ebdd8550f92af7dc6">EngineOption</a> : uint8_t { <a class="el" href="group__ThorVG.html#gga02be441d9536f40ebdd8550f92af7dc6a6adf97f83acf6453d4a6a4b1070f3754">None</a> = 0
 , <a class="el" href="group__ThorVG.html#gga02be441d9536f40ebdd8550f92af7dc6a7a1920d61156abc05a60135aefe8bc67">Default</a> = 1 &lt;&lt; 0
 , <a class="el" href="group__ThorVG.html#gga02be441d9536f40ebdd8550f92af7dc6aa65f8f091217197fd20a58b23a7cf086">SmartRender</a> = 1 &lt;&lt; 1
+, <a class="el" href="group__ThorVG.html#gga02be441d9536f40ebdd8550f92af7dc6acc2aa1a86516550070bb3dc340fdb5cf">Aliased</a> = 1 &lt;&lt; 2
  }</td></tr>
 <tr class="memdesc:ga02be441d9536f40ebdd8550f92af7dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration to specify rendering engine behavior.  <a href="group__ThorVG.html#ga02be441d9536f40ebdd8550f92af7dc6">More...</a><br /></td></tr>
 <tr class="separator:ga02be441d9536f40ebdd8550f92af7dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,6 +227,11 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gae8282ca2c59c662ab1fe28e832fc1745"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration specifying the algorithm used to establish which parts of the shape are treated as the inside of the shape.  <a href="group__ThorVG.html#gae8282ca2c59c662ab1fe28e832fc1745">More...</a><br /></td></tr>
 <tr class="separator:gae8282ca2c59c662ab1fe28e832fc1745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef4a22866fba70c21b3a063fa21369be" id="r_gaef4a22866fba70c21b3a063fa21369be"><td class="memItemLeft" align="right" valign="top">enum struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ThorVG.html#gaef4a22866fba70c21b3a063fa21369be">FilterMethod</a> : uint8_t { <a class="el" href="group__ThorVG.html#ggaef4a22866fba70c21b3a063fa21369beaaf17c98bbd83c27d6426d2ff3fa81d7f">Bilinear</a> = 0
+, <a class="el" href="group__ThorVG.html#ggaef4a22866fba70c21b3a063fa21369bea60494f02d440f316319dd0fad40ad007">Nearest</a>
+ }</td></tr>
+<tr class="memdesc:gaef4a22866fba70c21b3a063fa21369be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the image filtering method used during image scaling or transformation.  <a href="group__ThorVG.html#gaef4a22866fba70c21b3a063fa21369be">More...</a><br /></td></tr>
+<tr class="separator:gaef4a22866fba70c21b3a063fa21369be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaaf95c5225fd998fd34dc0429d0c31b1d" id="r_gaaf95c5225fd998fd34dc0429d0c31b1d"><td class="memItemLeft" align="right" valign="top">enum struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ThorVG.html#gaaf95c5225fd998fd34dc0429d0c31b1d">MaskMethod</a> : uint8_t { <br />
 &#160;&#160;<a class="el" href="group__ThorVG.html#ggaaf95c5225fd998fd34dc0429d0c31b1da6adf97f83acf6453d4a6a4b1070f3754">None</a> = 0
 , <a class="el" href="group__ThorVG.html#ggaaf95c5225fd998fd34dc0429d0c31b1da6132295fcf5570fb8b0a944ef322a598">Alpha</a>
@@ -266,7 +278,7 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:ga4dd2f3776540c10b565e0446aa8e9e02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration indicates the method used for blending paint. Please refer to the respective formulas for each method.  <a href="group__ThorVG.html#ga4dd2f3776540c10b565e0446aa8e9e02">More...</a><br /></td></tr>
 <tr class="separator:ga4dd2f3776540c10b565e0446aa8e9e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8100e9db83ed1fbb3dd595ba3bddfae5" id="r_ga8100e9db83ed1fbb3dd595ba3bddfae5"><td class="memItemLeft" align="right" valign="top">enum struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ThorVG.html#ga8100e9db83ed1fbb3dd595ba3bddfae5">SceneEffect</a> : uint8_t { <br />
-&#160;&#160;<a class="el" href="group__ThorVG.html#gga8100e9db83ed1fbb3dd595ba3bddfae5a7aaf620fe818489b59d52585ff04d995">ClearAll</a> = 0
+&#160;&#160;<a class="el" href="group__ThorVG.html#gga8100e9db83ed1fbb3dd595ba3bddfae5adc30bc0c7914db5918da4263fce93ad2">Clear</a> = 0
 , <a class="el" href="group__ThorVG.html#gga8100e9db83ed1fbb3dd595ba3bddfae5a4471a723be46b14fd252403c8db161ff">GaussianBlur</a>
 , <a class="el" href="group__ThorVG.html#gga8100e9db83ed1fbb3dd595ba3bddfae5a62fb0c043d7459d6590e00540884ea62">DropShadow</a>
 , <a class="el" href="group__ThorVG.html#gga8100e9db83ed1fbb3dd595ba3bddfae5adb3e3f51c9107e26c9bccf9a188ce2ed">Fill</a>
@@ -348,22 +360,22 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gga4dd2f3776540c10b565e0446aa8e9e02ad509708d332760c4dac5299aee3aa518" name="gga4dd2f3776540c10b565e0446aa8e9e02ad509708d332760c4dac5299aee3aa518"></a>HardLight&#160;</td><td class="fielddoc"><p>The same as Overlay but with the color roles reversed. (2 * S * D) if (S &lt; 128), otherwise 255 - 2 * (255 - S) * (255 - D) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga4dd2f3776540c10b565e0446aa8e9e02a0110233d77ea3a1b09b5a5a5e3e48ec3" name="gga4dd2f3776540c10b565e0446aa8e9e02a0110233d77ea3a1b09b5a5a5e3e48ec3"></a>SoftLight&#160;</td><td class="fielddoc"><p>The same as Overlay but with applying pure black or white does not result in pure black or white. (255 - 2 * S) * (D * D) + (2 * S * D) </p>
+<tr><td class="fieldname"><a id="gga4dd2f3776540c10b565e0446aa8e9e02a0110233d77ea3a1b09b5a5a5e3e48ec3" name="gga4dd2f3776540c10b565e0446aa8e9e02a0110233d77ea3a1b09b5a5a5e3e48ec3"></a>SoftLight&#160;</td><td class="fielddoc"><p>Darkens or lightens the colors, depending on the source color value. If S &lt;= 0.5: D - (1 - 2 * S) * D * (1 - D), otherwise: D + (2 * S - 1) * (G(D) - D), where G(D) = ((16 * D - 12) * D + 4) * D if D &lt;= 0.25, otherwise sqrt(D). </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga4dd2f3776540c10b565e0446aa8e9e02a28ed2ac6c29f64a3692c956004b8ff7a" name="gga4dd2f3776540c10b565e0446aa8e9e02a28ed2ac6c29f64a3692c956004b8ff7a"></a>Difference&#160;</td><td class="fielddoc"><p>Subtracts the bottom layer from the top layer or the other way around, to always get a non-negative value. (S - D) if (S &gt; D), otherwise (D - S) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga4dd2f3776540c10b565e0446aa8e9e02a25218e43e67f1b1c1c833bc48c7ca7bb" name="gga4dd2f3776540c10b565e0446aa8e9e02a25218e43e67f1b1c1c833bc48c7ca7bb"></a>Exclusion&#160;</td><td class="fielddoc"><p>The result is twice the product of the top and bottom layers, subtracted from their sum. S + D - (2 * S * D) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga4dd2f3776540c10b565e0446aa8e9e02afb5d805f5b3b22e4fd4a1bc66875dbe3" name="gga4dd2f3776540c10b565e0446aa8e9e02afb5d805f5b3b22e4fd4a1bc66875dbe3"></a>Hue&#160;</td><td class="fielddoc"><p>Combine with HSL(Sh + Ds + Dl) then convert it to RGB. </p>
+<tr><td class="fieldname"><a id="gga4dd2f3776540c10b565e0446aa8e9e02afb5d805f5b3b22e4fd4a1bc66875dbe3" name="gga4dd2f3776540c10b565e0446aa8e9e02afb5d805f5b3b22e4fd4a1bc66875dbe3"></a>Hue&#160;</td><td class="fielddoc"><p>Uses the hue of the source and the saturation and luminosity of the destination. </p>
 <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
 </td></tr>
-<tr><td class="fieldname"><a id="gga4dd2f3776540c10b565e0446aa8e9e02a2e3307b9b1a2cc64b48f1cd6977a4b29" name="gga4dd2f3776540c10b565e0446aa8e9e02a2e3307b9b1a2cc64b48f1cd6977a4b29"></a>Saturation&#160;</td><td class="fielddoc"><p>Combine with HSL(Dh + Ss + Dl) then convert it to RGB. </p>
+<tr><td class="fieldname"><a id="gga4dd2f3776540c10b565e0446aa8e9e02a2e3307b9b1a2cc64b48f1cd6977a4b29" name="gga4dd2f3776540c10b565e0446aa8e9e02a2e3307b9b1a2cc64b48f1cd6977a4b29"></a>Saturation&#160;</td><td class="fielddoc"><p>Uses the saturation of the source and the hue and luminosity of the destination. </p>
 <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
 </td></tr>
-<tr><td class="fieldname"><a id="gga4dd2f3776540c10b565e0446aa8e9e02acb5feb1b7314637725a2e73bdc9f7295" name="gga4dd2f3776540c10b565e0446aa8e9e02acb5feb1b7314637725a2e73bdc9f7295"></a>Color&#160;</td><td class="fielddoc"><p>Combine with HSL(Sh + Ss + Dl) then convert it to RGB. </p>
+<tr><td class="fieldname"><a id="gga4dd2f3776540c10b565e0446aa8e9e02acb5feb1b7314637725a2e73bdc9f7295" name="gga4dd2f3776540c10b565e0446aa8e9e02acb5feb1b7314637725a2e73bdc9f7295"></a>Color&#160;</td><td class="fielddoc"><p>Uses the hue and saturation of the source and the luminosity of the destination. </p>
 <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
 </td></tr>
-<tr><td class="fieldname"><a id="gga4dd2f3776540c10b565e0446aa8e9e02a46aa9fb99dc9c6f04b0b13a5db67f120" name="gga4dd2f3776540c10b565e0446aa8e9e02a46aa9fb99dc9c6f04b0b13a5db67f120"></a>Luminosity&#160;</td><td class="fielddoc"><p>Combine with HSL(Dh + Ds + Sl) then convert it to RGB. </p>
+<tr><td class="fieldname"><a id="gga4dd2f3776540c10b565e0446aa8e9e02a46aa9fb99dc9c6f04b0b13a5db67f120" name="gga4dd2f3776540c10b565e0446aa8e9e02a46aa9fb99dc9c6f04b0b13a5db67f120"></a>Luminosity&#160;</td><td class="fielddoc"><p>Uses the luminosity of the source and the hue and saturation of the destination. </p>
 <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="gga4dd2f3776540c10b565e0446aa8e9e02aec211f7c20af43e742bf2570c3cb84f9" name="gga4dd2f3776540c10b565e0446aa8e9e02aec211f7c20af43e742bf2570c3cb84f9"></a>Add&#160;</td><td class="fielddoc"><p>Simply adds pixel values of one layer with the other. (S + D) </p>
@@ -407,7 +419,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="ggaa667388edaec3922b6e65a11ba879c2ba559d69785b2a10fde59e1de8393a29df" name="ggaa667388edaec3922b6e65a11ba879c2ba559d69785b2a10fde59e1de8393a29df"></a>ARGB8888S&#160;</td><td class="fielddoc"><p>The channels are joined in the order: alpha, red, green, blue. Colors are un-alpha-premultiplied. </p>
 <dl class="section since"><dt>Since</dt><dd>0.12 </dd></dl>
 </td></tr>
-<tr><td class="fieldname"><a id="ggaa667388edaec3922b6e65a11ba879c2bab609549891a5a156c367c83755c1d811" name="ggaa667388edaec3922b6e65a11ba879c2bab609549891a5a156c367c83755c1d811"></a>Grayscale8&#160;</td><td class="fielddoc"><p>One single channel data. </p>
+<tr><td class="fieldname"><a id="ggaa667388edaec3922b6e65a11ba879c2bab609549891a5a156c367c83755c1d811" name="ggaa667388edaec3922b6e65a11ba879c2bab609549891a5a156c367c83755c1d811"></a>Grayscale8&#160;</td><td class="fielddoc"><p>Single channel, 1 byte per pixel 8-bit grayscale. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ggaa667388edaec3922b6e65a11ba879c2ba88183b946cc5f0e8c96b2e66e1c74a7e" name="ggaa667388edaec3922b6e65a11ba879c2ba88183b946cc5f0e8c96b2e66e1c74a7e"></a>Unknown&#160;</td><td class="fielddoc"><p>Unknown channel data. This is reserved for an initial ColorSpace value. </p>
 <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
@@ -445,6 +457,8 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="gga02be441d9536f40ebdd8550f92af7dc6a7a1920d61156abc05a60135aefe8bc67" name="gga02be441d9536f40ebdd8550f92af7dc6a7a1920d61156abc05a60135aefe8bc67"></a>Default&#160;</td><td class="fielddoc"><p>Uses the default rendering mode. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga02be441d9536f40ebdd8550f92af7dc6aa65f8f091217197fd20a58b23a7cf086" name="gga02be441d9536f40ebdd8550f92af7dc6aa65f8f091217197fd20a58b23a7cf086"></a>SmartRender&#160;</td><td class="fielddoc"><p>Enables automatic partial (smart) rendering optimizations. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga02be441d9536f40ebdd8550f92af7dc6acc2aa1a86516550070bb3dc340fdb5cf" name="gga02be441d9536f40ebdd8550f92af7dc6acc2aa1a86516550070bb3dc340fdb5cf"></a>Aliased&#160;</td><td class="fielddoc"><p>Disables anti-aliased rendering. </p><dl class="section note"><dt>Note</dt><dd>Experimental API </dd></dl>
 </td></tr>
 </table>
 
@@ -507,6 +521,37 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="gga9dc091ab88de1789c1fc010072fcee24a74de3e45e4491e956e8dc18d841d9b00" name="gga9dc091ab88de1789c1fc010072fcee24a74de3e45e4491e956e8dc18d841d9b00"></a>Reflect&#160;</td><td class="fielddoc"><p>The gradient pattern is reflected outside the gradient area until the expected region is filled. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga9dc091ab88de1789c1fc010072fcee24a7020426cfb0a204051be4b3053d2acc8" name="gga9dc091ab88de1789c1fc010072fcee24a7020426cfb0a204051be4b3053d2acc8"></a>Repeat&#160;</td><td class="fielddoc"><p>The gradient pattern is repeated continuously beyond the gradient area until the expected region is filled. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaef4a22866fba70c21b3a063fa21369be" name="gaef4a22866fba70c21b3a063fa21369be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaef4a22866fba70c21b3a063fa21369be">&#9670;&#160;</a></span>FilterMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum struct <a class="el" href="group__ThorVG.html#gaef4a22866fba70c21b3a063fa21369be">FilterMethod</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Defines the image filtering method used during image scaling or transformation. </p>
+<dl class="section since"><dt>Since</dt><dd>1.1 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaef4a22866fba70c21b3a063fa21369beaaf17c98bbd83c27d6426d2ff3fa81d7f" name="ggaef4a22866fba70c21b3a063fa21369beaaf17c98bbd83c27d6426d2ff3fa81d7f"></a>Bilinear&#160;</td><td class="fielddoc"><p>Smooth interpolation using surrounding pixels for higher quality. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaef4a22866fba70c21b3a063fa21369bea60494f02d440f316319dd0fad40ad007" name="ggaef4a22866fba70c21b3a063fa21369bea60494f02d440f316319dd0fad40ad007"></a>Nearest&#160;</td><td class="fielddoc"><p>Fast filtering using nearest-neighbor sampling. </p>
 </td></tr>
 </table>
 
@@ -667,10 +712,10 @@ Enumerations</h2></td></tr>
 
 <p>Enumeration that defines methods used for <a class="el" href="structtvg_1_1Scene.html" title="A class to composite children paints.">Scene</a> Effects. </p>
 <p>This enum provides options to apply various post-processing effects to a scene. <a class="el" href="structtvg_1_1Scene.html" title="A class to composite children paints.">Scene</a> effects are typically applied to modify the final appearance of a rendered scene, such as blurring.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structtvg_1_1Scene.html#a8c4d96805c51d1e1876458ad84708925" title="Apply a post-processing effect to the scene.">Scene::push(SceneEffect effect, ...)</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structtvg_1_1Scene.html#aef9aea350d249a9649f7e9536b0bef1d" title="Add a post-processing effect to the scene.">Scene::add(SceneEffect effect, ...)</a></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>1.0 </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga8100e9db83ed1fbb3dd595ba3bddfae5a7aaf620fe818489b59d52585ff04d995" name="gga8100e9db83ed1fbb3dd595ba3bddfae5a7aaf620fe818489b59d52585ff04d995"></a>ClearAll&#160;</td><td class="fielddoc"><p>Reset all previously applied scene effects, restoring the scene to its original state. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga8100e9db83ed1fbb3dd595ba3bddfae5adc30bc0c7914db5918da4263fce93ad2" name="gga8100e9db83ed1fbb3dd595ba3bddfae5adc30bc0c7914db5918da4263fce93ad2"></a>Clear&#160;</td><td class="fielddoc"><p>Clear all previously applied scene effects, restoring the scene to its original state. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga8100e9db83ed1fbb3dd595ba3bddfae5a4471a723be46b14fd252403c8db161ff" name="gga8100e9db83ed1fbb3dd595ba3bddfae5a4471a723be46b14fd252403c8db161ff"></a>GaussianBlur&#160;</td><td class="fielddoc"><p>Apply a blur effect with a Gaussian filter. Param(4) = {sigma(double)[&gt; 0], direction(int)[both: 0 / horizontal: 1 / vertical: 2], border(int)[duplicate: 0 / wrap: 1], quality(int)[0 - 100]}. </p>
 </td></tr>
