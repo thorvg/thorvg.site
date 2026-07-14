@@ -1,0 +1,5 @@
+<map id="GlyphMetrics" name="GlyphMetrics">
+<area shape="rect" id="Node000001" title="Describes the layout metrics of a glyph." alt="" coords="5,108,113,133"/>
+<area shape="rect" id="Node000002" href="$structtvg_1_1Point.html" title="A data structure representing a point in two&#45;dimensional space." alt="" coords="32,5,87,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,45,62,108,57,108,57,45"/>
+</map>
